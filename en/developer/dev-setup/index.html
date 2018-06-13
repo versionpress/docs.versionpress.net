@@ -1,0 +1,2119 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Keep for compatibility, see http://bit.ly/2tMB6ag -->
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+
+    <!-- Page description -->
+    
+    <meta name="description" content="User and developer documentation for VersionPress" />
+    
+
+    <!-- Canonical -->
+    
+
+    <!-- Page author -->
+    
+
+    <!-- Localization -->
+    
+    <meta name="lang:clipboard.copy" content="Copy to clipboard" />
+    
+    <meta name="lang:clipboard.copied" content="Copied to clipboard" />
+    
+    <meta name="lang:search.language" content="en" />
+    
+    <meta name="lang:search.pipeline.stopwords" content="True" />
+    
+    <meta name="lang:search.pipeline.trimmer" content="True" />
+    
+    <meta name="lang:search.result.none" content="No matching documents" />
+    
+    <meta name="lang:search.result.one" content="1 matching document" />
+    
+    <meta name="lang:search.result.other" content="# matching documents" />
+    
+    <meta name="lang:search.tokenizer" content="[\s\-\.]+" />
+    
+
+    <!-- Favicon -->
+    <link rel="shortcut icon"
+        href="https://user-images.githubusercontent.com/101152/41179166-07f4a0b2-6b6a-11e8-98f1-c21d285dbb48.png">
+
+    <!-- Generator banner -->
+    <meta name="generator"
+        content="mkdocs-0.17.3, $md-name$-$md-version$" />
+
+    
+      
+        <title>Dev Setup - VersionPress Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/application.8d40d89b.css">
+      
+        <link rel="stylesheet" href="../../../assets/stylesheets/application-palette.6079476c.css">
+      
+    
+    
+      <script src="../../../assets/javascripts/modernizr.1aa3b519.js"></script>
+    
+    
+      <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+      
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Helvetica+Neue:300,400,400i,700|Consolas">
+        <style>body,input{font-family:"Helvetica Neue","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Consolas","Courier New",Courier,monospace}</style>
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/extra.css">
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="white" data-md-color-accent="light-blue">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448"
+    viewBox="0 0 416 448" id="github">
+  <path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19-18.125
+        8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19 18.125-8.5
+        18.125 8.5 10.75 19 3.125 20.5zM320 304q0 10-3.125 20.5t-10.75
+        19-18.125 8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19
+        18.125-8.5 18.125 8.5 10.75 19 3.125 20.5zM360
+        304q0-30-17.25-51t-46.75-21q-10.25 0-48.75 5.25-17.75 2.75-39.25
+        2.75t-39.25-2.75q-38-5.25-48.75-5.25-29.5 0-46.75 21t-17.25 51q0 22 8
+        38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0
+        37.25-1.75t35-7.375 30.5-15 20.25-25.75 8-38.375zM416 260q0 51.75-15.25
+        82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5-41.75
+        1.125q-19.5 0-35.5-0.75t-36.875-3.125-38.125-7.5-34.25-12.875-30.25-20.25-21.5-28.75q-15.5-30.75-15.5-82.75
+        0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25
+        30.875q36.75-8.75 77.25-8.75 37 0 70 8 26.25-20.5
+        46.75-30.25t47.25-9.75q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34
+        99.5z" />
+</svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+    
+      <a href="#dev-setup" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../../.." title="VersionPress Documentation" class="md-header-nav__button md-logo">
+          
+            <img src="https://user-images.githubusercontent.com/101152/41179166-07f4a0b2-6b6a-11e8-98f1-c21d285dbb48.png" width="24" height="24">
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            
+              <span class="md-header-nav__topic">
+                VersionPress Documentation
+              </span>
+              <span class="md-header-nav__topic">
+                Dev Setup
+              </span>
+            
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          
+            <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+            
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+
+  <a href="https://github.com/versionpress/versionpress/" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      versionpress/versionpress
+    </div>
+  </a>
+
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="drawer">
+    <span class="md-nav__button md-logo">
+      
+        <img src="https://user-images.githubusercontent.com/101152/41179166-07f4a0b2-6b6a-11e8-98f1-c21d285dbb48.png" width="48" height="48">
+      
+    </span>
+    VersionPress Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+
+  <a href="https://github.com/versionpress/versionpress/" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      versionpress/versionpress
+    </div>
+  </a>
+
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../.." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      Getting Started
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Getting Started
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../getting-started/" title="Getting Started Home" class="md-nav__link">
+      Getting Started Home
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../getting-started/concepts/" title="Basic Concepts" class="md-nav__link">
+      Basic Concepts
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../getting-started/installation-uninstallation/" title="Installation and Uninstallation" class="md-nav__link">
+      Installation and Uninstallation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../getting-started/configuration/" title="Configuration" class="md-nav__link">
+      Configuration
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../getting-started/using-versionpress/" title="Using VersionPress" class="md-nav__link">
+      Using VersionPress
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../getting-started/about-eap/" title="Developer Preview" class="md-nav__link">
+      Developer Preview
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      Feature Focus
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        Feature Focus
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../feature-focus/" title="Feature Focus Home" class="md-nav__link">
+      Feature Focus Home
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../feature-focus/how-versionpress-works/" title="How VersionPress Works" class="md-nav__link">
+      How VersionPress Works
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../feature-focus/change-tracking/" title="Change Tracking" class="md-nav__link">
+      Change Tracking
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../feature-focus/undo-and-rollback/" title="Undo and Rollback" class="md-nav__link">
+      Undo and Rollback
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../feature-focus/searching-history/" title="Searching History" class="md-nav__link">
+      Searching History
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../feature-focus/external-plugins/" title="External Plugins and Themes" class="md-nav__link">
+      External Plugins and Themes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../feature-focus/custom-project-structure/" title="Custom Project Structure" class="md-nav__link">
+      Custom Project Structure
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../feature-focus/wp-cli/" title="WP-CLI Commands" class="md-nav__link">
+      WP-CLI Commands
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../feature-focus/git/" title="Versioning Engine - Git" class="md-nav__link">
+      Versioning Engine - Git
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../feature-focus/performance/" title="Performance Considerations" class="md-nav__link">
+      Performance Considerations
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      Sync / Team Workflows
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        Sync / Team Workflows
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../sync/" title="Sync / Team Workflows Home" class="md-nav__link">
+      Sync / Team Workflows Home
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../sync/concepts/" title="Concepts" class="md-nav__link">
+      Concepts
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../sync/cloning/" title="Cloning a Site" class="md-nav__link">
+      Cloning a Site
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../sync/merging/" title="Merging Sites" class="md-nav__link">
+      Merging Sites
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      3rd Party Integrations
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        3rd Party Integrations
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../integrations/" title="3rd Party Integrations Home" class="md-nav__link">
+      3rd Party Integrations Home
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../integrations/plugins/" title="Plugins" class="md-nav__link">
+      Plugins
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../integrations/themes/" title="Themes" class="md-nav__link">
+      Themes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../integrations/hosts/" title="Hosts" class="md-nav__link">
+      Hosts
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      Troubleshooting
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        Troubleshooting
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../troubleshooting/" title="Troubleshooting Home" class="md-nav__link">
+      Troubleshooting Home
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../troubleshooting/system-info-page/" title="System Info Page" class="md-nav__link">
+      System Info Page
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../troubleshooting/ui-not-loading/" title="UI Not Loading" class="md-nav__link">
+      UI Not Loading
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../troubleshooting/iis/" title="IIS" class="md-nav__link">
+      IIS
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7" checked>
+    
+    <label class="md-nav__link" for="nav-7">
+      Developer
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        Developer
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        Dev Setup
+      </label>
+    
+    <a href="./" title="Dev Setup" class="md-nav__link md-nav__link--active">
+      Dev Setup
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#getting-started" title="Getting started" class="md-nav__link">
+    Getting started
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#windows-users-use-git-bash" title="Windows users: use Git Bash" class="md-nav__link">
+    Windows users: use Git Bash
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#project-initialization" title="Project initialization" class="md-nav__link">
+    Project initialization
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dockerized-development-environment" title="Dockerized development environment" class="md-nav__link">
+    Dockerized development environment
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#phpstorm-setup" title="PhpStorm setup" class="md-nav__link">
+    PhpStorm setup
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#writing-code" title="Writing code" class="md-nav__link">
+    Writing code
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#debugging" title="Debugging" class="md-nav__link">
+    Debugging
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#testing" title="Testing" class="md-nav__link">
+    Testing
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dockerized-testing-environment" title="Dockerized testing environment" class="md-nav__link">
+    Dockerized testing environment
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#running-tests-from-command-line" title="Running tests from command line" class="md-nav__link">
+    Running tests from command line
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#customizing-what-tests-run" title="Customizing what tests run" class="md-nav__link">
+    Customizing what tests run
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test-output" title="Test output" class="md-nav__link">
+    Test output
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#clean-up-tests" title="Clean up tests" class="md-nav__link">
+    Clean up tests
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tips-for-tests" title="Tips for tests" class="md-nav__link">
+    Tips for tests
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#running-and-debugging-tests-from-phpstorm" title="Running and debugging tests from PhpStorm" class="md-nav__link">
+    Running and debugging tests from PhpStorm
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#starting-debugging-session-from-command-line" title="Starting debugging session from command line" class="md-nav__link">
+    Starting debugging session from command line
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#phpstorm-example" title="PhpStorm example" class="md-nav__link">
+    PhpStorm example
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vscode-example" title="VSCode example" class="md-nav__link">
+    VSCode example
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unit-tests" title="Unit tests" class="md-nav__link">
+    Unit tests
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#end2end-tests" title="End2end tests" class="md-nav__link">
+    End2end tests
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#other-tests" title="Other tests" class="md-nav__link">
+    Other tests
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#frontend-development" title="Frontend development" class="md-nav__link">
+    Frontend development
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#phpstorm-webstorm-setup" title="PhpStorm / WebStorm setup" class="md-nav__link">
+    PhpStorm / WebStorm setup
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#running-frontend-separately" title="Running frontend separately" class="md-nav__link">
+    Running frontend separately
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#production-build" title="Production build" class="md-nav__link">
+    Production build
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#developing-the-dev-setup" title="Developing the dev setup" class="md-nav__link">
+    Developing the dev setup
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#npm-scripts" title="npm scripts" class="md-nav__link">
+    npm scripts
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#building-and-pushing-images" title="Building and pushing images" class="md-nav__link">
+    Building and pushing images
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#links-to-older-documents" title="Links to older documents" class="md-nav__link">
+    Links to older documents
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#docker-tips" title="Docker tips" class="md-nav__link">
+    Docker tips
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#windows-tips" title="Windows tips" class="md-nav__link">
+    Windows tips
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#git-bash" title="Git Bash" class="md-nav__link">
+    Git Bash
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#docker-for-windows" title="Docker for Windows" class="md-nav__link">
+    Docker for Windows
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#disable-antivirus-software" title="Disable antivirus software" class="md-nav__link">
+    Disable antivirus software
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../plugin-support/" title="Plugin Support" class="md-nav__link">
+      Plugin Support
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../development-process/" title="Development Process" class="md-nav__link">
+      Development Process
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
+    
+    <label class="md-nav__link" for="nav-8">
+      Release Notes
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-8">
+        Release Notes
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release-notes/" title="Release Notes Home" class="md-nav__link">
+      Release Notes Home
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release-notes/roadmap/" title="Roadmap" class="md-nav__link">
+      Roadmap
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release-notes/4.0-beta/" title="4.0-beta Release Notes" class="md-nav__link">
+      4.0-beta Release Notes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release-notes/4.0-alpha1/" title="4.0-alpha1 Release Notes" class="md-nav__link">
+      4.0-alpha1 Release Notes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release-notes/3.0.2/" title="3.0.2 Release Notes" class="md-nav__link">
+      3.0.2 Release Notes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release-notes/3.0.1/" title="3.0.1 Release Notes" class="md-nav__link">
+      3.0.1 Release Notes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release-notes/3.0/" title="3.0 Release Notes" class="md-nav__link">
+      3.0 Release Notes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release-notes/2.2/" title="2.2 Release Notes" class="md-nav__link">
+      2.2 Release Notes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release-notes/2.1.1/" title="2.1.1 Release Notes" class="md-nav__link">
+      2.1.1 Release Notes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release-notes/2.1/" title="2.1 Release Notes" class="md-nav__link">
+      2.1 Release Notes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release-notes/2.0.1/" title="2.0.1 Release Notes" class="md-nav__link">
+      2.0.1 Release Notes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release-notes/2.0/" title="2.0 Release Notes" class="md-nav__link">
+      2.0 Release Notes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release-notes/1.0.1/" title="1.0.1 Release Notes" class="md-nav__link">
+      1.0.1 Release Notes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release-notes/1.0/" title="1.0 Release Notes" class="md-nav__link">
+      1.0 Release Notes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release-notes/1.0-rc3/" title="1.0-rc3 Release Notes" class="md-nav__link">
+      1.0-rc3 Release Notes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release-notes/1.0-rc2/" title="1.0-rc2 Release Notes" class="md-nav__link">
+      1.0-rc2 Release Notes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release-notes/1.0-rc1/" title="1.0-rc1 Release Notes" class="md-nav__link">
+      1.0-rc1 Release Notes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release-notes/1.0-beta2/" title="1.0-beta2 Release Notes" class="md-nav__link">
+      1.0-beta2 Release Notes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release-notes/1.0-beta1/" title="1.0-beta1 Release Notes" class="md-nav__link">
+      1.0-beta1 Release Notes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release-notes/1.0-alpha3/" title="1.0-alpha3 Release Notes" class="md-nav__link">
+      1.0-alpha3 Release Notes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release-notes/1.0-alpha2/" title="1.0-alpha2 Release Notes" class="md-nav__link">
+      1.0-alpha2 Release Notes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release-notes/1.0-alpha1/" title="1.0-alpha1 Release Notes" class="md-nav__link">
+      1.0-alpha1 Release Notes
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#getting-started" title="Getting started" class="md-nav__link">
+    Getting started
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#windows-users-use-git-bash" title="Windows users: use Git Bash" class="md-nav__link">
+    Windows users: use Git Bash
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#project-initialization" title="Project initialization" class="md-nav__link">
+    Project initialization
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dockerized-development-environment" title="Dockerized development environment" class="md-nav__link">
+    Dockerized development environment
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#phpstorm-setup" title="PhpStorm setup" class="md-nav__link">
+    PhpStorm setup
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#writing-code" title="Writing code" class="md-nav__link">
+    Writing code
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#debugging" title="Debugging" class="md-nav__link">
+    Debugging
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#testing" title="Testing" class="md-nav__link">
+    Testing
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dockerized-testing-environment" title="Dockerized testing environment" class="md-nav__link">
+    Dockerized testing environment
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#running-tests-from-command-line" title="Running tests from command line" class="md-nav__link">
+    Running tests from command line
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#customizing-what-tests-run" title="Customizing what tests run" class="md-nav__link">
+    Customizing what tests run
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test-output" title="Test output" class="md-nav__link">
+    Test output
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#clean-up-tests" title="Clean up tests" class="md-nav__link">
+    Clean up tests
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tips-for-tests" title="Tips for tests" class="md-nav__link">
+    Tips for tests
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#running-and-debugging-tests-from-phpstorm" title="Running and debugging tests from PhpStorm" class="md-nav__link">
+    Running and debugging tests from PhpStorm
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#starting-debugging-session-from-command-line" title="Starting debugging session from command line" class="md-nav__link">
+    Starting debugging session from command line
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#phpstorm-example" title="PhpStorm example" class="md-nav__link">
+    PhpStorm example
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vscode-example" title="VSCode example" class="md-nav__link">
+    VSCode example
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unit-tests" title="Unit tests" class="md-nav__link">
+    Unit tests
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#end2end-tests" title="End2end tests" class="md-nav__link">
+    End2end tests
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#other-tests" title="Other tests" class="md-nav__link">
+    Other tests
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#frontend-development" title="Frontend development" class="md-nav__link">
+    Frontend development
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#phpstorm-webstorm-setup" title="PhpStorm / WebStorm setup" class="md-nav__link">
+    PhpStorm / WebStorm setup
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#running-frontend-separately" title="Running frontend separately" class="md-nav__link">
+    Running frontend separately
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#production-build" title="Production build" class="md-nav__link">
+    Production build
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#developing-the-dev-setup" title="Developing the dev setup" class="md-nav__link">
+    Developing the dev setup
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#npm-scripts" title="npm scripts" class="md-nav__link">
+    npm scripts
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#building-and-pushing-images" title="Building and pushing images" class="md-nav__link">
+    Building and pushing images
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#links-to-older-documents" title="Links to older documents" class="md-nav__link">
+    Links to older documents
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#docker-tips" title="Docker tips" class="md-nav__link">
+    Docker tips
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#windows-tips" title="Windows tips" class="md-nav__link">
+    Windows tips
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#git-bash" title="Git Bash" class="md-nav__link">
+    Git Bash
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#docker-for-windows" title="Docker for Windows" class="md-nav__link">
+    Docker for Windows
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#disable-antivirus-software" title="Disable antivirus software" class="md-nav__link">
+    Disable antivirus software
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/versionpress/versionpress/edit/master/docs/content/en/developer/dev-setup.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                <h1 id="dev-setup">Dev setup<a class="headerlink" href="#dev-setup" title="Permanent link">&para;</a></h1>
+<p>This will set you up for VersionPress development. 👩‍💻 👨‍💻</p>
+<h2 id="getting-started">Getting started<a class="headerlink" href="#getting-started" title="Permanent link">&para;</a></h2>
+<p>Our approach is:</p>
+<ul>
+<li>You develop in <strong>local tools</strong> you're comfortable with – PhpStorm, vim, VSCode, ...</li>
+<li>Runtime is handled by <strong>Docker</strong>. You don't need MAMP / XAMPP, local installation of Selenium, etc.</li>
+<li>Common tasks are automated via <strong>npm scripts</strong>, for example, <code>npm run tests:full</code>.</li>
+</ul>
+<p>If you're not familiar with Docker, this is <a href="https://docs.docker.com/get-started/">great quick start</a>. We also have some <a href="#docker-tips">tips for you</a>.</p>
+<p>This software is expected on your machine:</p>
+<ul>
+<li>Git 2.10+</li>
+<li>Node.js 8+, npm 6+</li>
+<li>Docker 18.03+</li>
+<li>PHP 7+ and Composer 1.4+</li>
+</ul>
+<h3 id="windows-users-use-git-bash">Windows users: use Git Bash<a class="headerlink" href="#windows-users-use-git-bash" title="Permanent link">&para;</a></h3>
+<p>Git Bash (part of <a href="https://gitforwindows.org/">Git for Windows</a>) is required on Windows, please use it instead of <code>cmd.exe</code> / PowerShell for both interactive sessions and as your npm script shell:</p>
+<div class="codehilite"><pre><span></span>npm config set script-shell &quot;c:\Program Files\git\bin\bash.exe&quot;
+</pre></div>
+
+<p>See also <a href="#windows-tips">Windows tips</a> below.</p>
+<h2 id="project-initialization">Project initialization<a class="headerlink" href="#project-initialization" title="Permanent link">&para;</a></h2>
+<ol>
+<li><code>git clone https://github.com/versionpress/versionpress</code></li>
+<li><code>cd versionpress</code></li>
+<li><code>npm install</code></li>
+</ol>
+<p>Have a ☕, this will take a while.</p>
+<blockquote>
+<p><strong>Tip</strong>: From time to time, it's useful to clean up everything and pull latest Docker images. Run <code>npm run refresh-dev</code>.</p>
+</blockquote>
+<h2 id="dockerized-development-environment">Dockerized development environment<a class="headerlink" href="#dockerized-development-environment" title="Permanent link">&para;</a></h2>
+<p>To start a development site:</p>
+<ol>
+<li>Make sure ports 80 and 3306 are free, e.g., no local MAMP / XAMPP is running.</li>
+<li>Run <code>npm start</code>.</li>
+</ol>
+<p>This will start a set of Docker containers in the background. When everything boots up, log into the test site at <a href="http://localhost">http://localhost</a>, install WordPress and activate VersionPress on the <em>Plugins</em> page. You're now all set up! 🎉</p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/101152/40431982-e2884a72-5ea8-11e8-9a07-e9857b5f1b67.png" /></p>
+<p>Let's explore your development environment:</p>
+<ul>
+<li>VersionPress source files are directly mapped to the site's <code>wp-content/plugins/versionpress</code>. Any changes you make locally are immediately live.</li>
+<li>Database can be inspected using <a href="https://www.adminer.org/">Adminer</a> at <a href="http://localhost:8099">http://localhost:8099</a>, server name <code>mysql</code>, login <code>root</code> / <code>r00tpwd</code>. You can also use tools like MySQL Workbench or <code>mysql</code> command-line client, e.g., <code>mysql -u root -p</code>.</li>
+<li>WordPress root is mapped to <code>./dev-env/wp</code>. You can use your local Git client to inspect the site's history there.</li>
+<li>To invoke WP-CLI or Git commands in the site, create a terminal session via <code>docker-compose exec wordpress /bin/bash</code> or invoke the command directly, e.g., <code>docker-compose exec wordpress git log</code> or <code>docker-compose exec wordpress wp option update blogname &quot;Hello&quot;</code>.</li>
+</ul>
+<p>Some useful tips for managing your Docker environment:</p>
+<ul>
+<li><code>docker-compose ps</code> lists running containers.</li>
+<li><code>docker-compose logs -f</code> displays live logs</li>
+<li><code>docker-compose logs wordpress</code> displays logs of a single service.</li>
+<li><code>docker stats</code> show live CPU / memory usage.</li>
+<li>See also <a href="#docker-tips">Docker tips</a> below.</li>
+</ul>
+<p>Run <code>npm stop</code> to stop the development environment. Run <code>npm run stop-and-cleanup</code> to also clean up WordPress files and MySQL database for a fresh start next time.</p>
+<h3 id="phpstorm-setup">PhpStorm setup<a class="headerlink" href="#phpstorm-setup" title="Permanent link">&para;</a></h3>
+<p>For PHP development, we recommend <a href="https://www.jetbrains.com/phpstorm/">PhpStorm</a> and ship project files for it. The steps here have been tested in PhpStorm <strong>2018.1</strong>.</p>
+<p>Run <code>npm run init-phpstorm</code>. This copies <code>.idea</code> to <code>plugins/versionpress</code>.</p>
+<p>Open the <code>plugins/versionpress</code> project in PhpStorm. On the first start, you'll see two prompts:</p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/101152/40103254-1e1bb46e-58ed-11e8-8fd3-42c47a504fa7.png" /></p>
+<p><strong>Enable WordPress support</strong> but leave the installation path empty (ignore the warning):</p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/101152/40103297-4420c96a-58ed-11e8-9bd7-8e36c8851a45.png" /></p>
+<p>Enable <strong>Composer sync</strong>.</p>
+<p>For <strong>Code Sniffer inspections</strong> to work, there's a one-time configuration: Go to <em>Settings</em> &gt; <em>Languages &amp; Frameworks</em> &gt; <em>PHP</em> &gt; <em>Code Sniffer</em>, select <em>Local</em>, click the three dots next to it and provide your full system path to <code>./vendor/bin/phpcs</code>.</p>
+<blockquote>
+<p><strong>Note</strong>: Most VersionPress code uses the <a href="http://www.php-fig.org/psr/psr-2/">PSR-2</a> coding standard with only the parts directly interacting with WordPress using WordPress conventions. For example, global functions are defined as <code>vp_register_hooks()</code>, not <code>registerHooks()</code>.</p>
+</blockquote>
+<p>It is also useful to <strong>install the <a href="https://plugins.jetbrains.com/plugin/7294?pr=phpStorm">EditorConfig</a> extension</strong>, VersionPress ships with some basic formatting rules.</p>
+<h3 id="writing-code">Writing code<a class="headerlink" href="#writing-code" title="Permanent link">&para;</a></h3>
+<p>Please refer to the <a href="https://github.com/versionpress/versionpress/blob/master/CONTRIBUTING.md#contributing-code">Contributing code</a> section in <code>CONTRIBUTING.md</code>.</p>
+<h3 id="debugging">Debugging<a class="headerlink" href="#debugging" title="Permanent link">&para;</a></h3>
+<p>The development containers have <a href="https://xdebug.org/">Xdebug</a> installed and configured. Here is how to make debugging work in PhpStorm; the <a href="#starting-debugging-session-from-command-line">Debugging tests</a> section gives an example of how to make debugging work in VSCode.</p>
+<p>Start the Docker stack with <code>npm start</code>.</p>
+<p>In PhpStorm, go to <em>Settings</em> &gt; <em>Languages &amp; Frameworks</em> &gt; <em>PHP</em> &gt; <em>Servers</em> and check the path mappings of the pre-configured <em>VersionPress-dev</em> server. Specifically, update the WordPress mapping which PhpStorm does not persist automatically:</p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/101152/40432492-1f2f7530-5eaa-11e8-91f2-8b3794f97b74.png" /></p>
+<p>The two mappings should be:</p>
+<ul>
+<li><code>&lt;your local path&gt;/plugins/versionpress</code> -&gt; <code>/var/www/html/wp-content/plugins/versionpress</code></li>
+<li><code>&lt;your local path&gt;/ext-libs/wordpress</code> -&gt; <code>/var/www/html</code></li>
+</ul>
+<p>The default zero configuration settings in <em>Settings</em> &gt; <em>Languages &amp; Frameworks</em> &gt; <em>PHP</em> &gt; <em>Debug</em> should be fine:</p>
+<p><img alt="image" src="https://cloud.githubusercontent.com/assets/101152/26285067/34fefbd4-3e48-11e7-8f11-544507a1c5f7.png" /></p>
+<p>Enable debugging in the browser, most commonly using a <a href="https://confluence.jetbrains.com/display/PhpStorm/Browser+Debugging+Extensions">browser extension or a bookmarklet</a>:</p>
+<p><img alt="image" src="https://cloud.githubusercontent.com/assets/101152/26764669/7f3e4dc0-496b-11e7-9dc2-10351d6378bc.png" /></p>
+<p>Place a breakpoint somewhere, e.g., in the main <code>versionpress.php</code> file, and start listening for debug connections in PhpStorm.</p>
+<p>Reload a page in your browser. Debugging should now work:</p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/101152/40105051-2cdd1524-58f2-11e8-8880-d50d70d4195f.png" /></p>
+<p>After you're done with debugging, run <code>npm stop</code> or <code>npm run stop-and-cleanup</code>.</p>
+<h2 id="testing">Testing<a class="headerlink" href="#testing" title="Permanent link">&para;</a></h2>
+<p>Tests are a significant part of the VersionPress project, we care about writing and maintaining them. They live in <code>plugins/versionpress/tests</code> and there are several types of them, from unit to full end2end tests. They all run in a dockerized test environment.</p>
+<blockquote>
+<p><strong>Note</strong>: the <code>./frontend</code> app has its own tests, this section is about core VersionPress tests (PHP code) only.</p>
+</blockquote>
+<h3 id="dockerized-testing-environment">Dockerized testing environment<a class="headerlink" href="#dockerized-testing-environment" title="Permanent link">&para;</a></h3>
+<p>Similarly to the <a href="#exploring-dockerized-environment">development environment</a>, tests utilize Docker Compose as well. The main benefit is that you don't need to set up things like Selenium or Java locally.</p>
+<p>Most tasks are scripted, for example, you just run <code>npm run tests:unit</code> but you can also drop to the raw Docker Compose mode and do things like <code>docker-compose run --rm tests ...</code>. In that case, one thing to understand is that there are two services in <code>docker-compose.yml</code> to choose from:</p>
+<ul>
+<li><code>tests</code> – just a test runner.</li>
+<li><code>tests-with-wordpress</code> – starts a WordPress stack.</li>
+</ul>
+<p>All scripts also come with a <code>...:debug</code> version, for example, <code>tests:unit:debug</code>. See <a href="#starting-debugging-session-from-command-line">Starting a debugging session from command line</a>.</p>
+<h3 id="running-tests-from-command-line">Running tests from command line<a class="headerlink" href="#running-tests-from-command-line" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Make sure you have run <code>npm install</code> as described above and have Docker running.</li>
+<li>Run <code>npm run tests:unit</code> or <code>npm run tests:full</code>.</li>
+</ol>
+<p>Unit tests use a simpler <code>tests</code> service and are fast to execute.</p>
+<p>The full tests include <a href="#end2end-tests">end2end tests</a> and are relatively slow to run, however, if they pass, there's a good chance that VersionPress works correctly.</p>
+<h4 id="customizing-what-tests-run">Customizing what tests run<a class="headerlink" href="#customizing-what-tests-run" title="Permanent link">&para;</a></h4>
+<p><code>tests:custom</code> and <code>tests:custom-with-wordpress</code> scripts allow you to run custom tests easily. Here are some examples:</p>
+<blockquote>
+<p>❕ Notice how PHPUnit arguments come after <code>--</code>.</p>
+</blockquote>
+<div class="codehilite"><pre><span></span><span class="c1"># Pick a test suite from the default phpunit.xml</span>
+npm run tests:custom -- -c phpunit.xml --testsuite Unit
+
+<span class="c1"># Create your own phpunit.*.xml (gitignored)</span>
+npm run tests:custom -- -c phpunit.custom.xml
+
+<span class="c1"># Run specific test class</span>
+npm run tests:custom-with-wordpress -- -c phpunit.xml --filter RevertTest
+</pre></div>
+
+<p>If you want to go entirely custom, use raw <code>docker-compose</code>:</p>
+<div class="codehilite"><pre><span></span><span class="c1"># PhpStorm-like invocation (copy/pasted from its console):</span>
+docker-compose run --rm tests ../vendor/bin/phpunit --bootstrap /opt/versionpress/tests/phpunit-bootstrap.php --no-configuration /opt/versionpress/tests/Unit
+</pre></div>
+
+<h4 id="test-output">Test output<a class="headerlink" href="#test-output" title="Permanent link">&para;</a></h4>
+<p>Npm scripts are configured to log in a TestDox format to container's <code>/var/opt/versionpress/logs</code> which is mapped to your local folder <code>./dev-env/test-logs</code>.</p>
+<p>To log in <a href="http://phpunit.readthedocs.io/en/7.1/textui.html#command-line-options">another supported format</a>, run tests manually like this:</p>
+<div class="codehilite"><pre><span></span>docker-compose run --rm tests ../vendor/bin/phpunit -c phpunit.xml --log-junit /var/opt/versionpress/logs/vp-tests.log
+</pre></div>
+
+<h4 id="clean-up-tests">Clean up tests<a class="headerlink" href="#clean-up-tests" title="Permanent link">&para;</a></h4>
+<p>If you've run tests that use the <code>tests-with-wordpress</code> service, the whole Docker stack is kept running so that you can inspect it. For example, you can use your local Git client to explore the site's history in <code>dev-env/wp-for-tests/wptest</code>. The <a href="#end2end-tests">end2end tests</a> section provides more info on this.</p>
+<p>When you're done with tests, run <code>npm stop</code> to shut down the Docker stack or <code>npm run stop-and-cleanup</code> to also remove the volumes so that the next start is entirely fresh.</p>
+<h4 id="tips-for-tests">Tips for tests<a class="headerlink" href="#tips-for-tests" title="Permanent link">&para;</a></h4>
+<ul>
+<li>If you're trying to narrow down a bug, it's useful to run a smaller test suite via one of the options above and add <code>stopOnFailure=&quot;true&quot;</code> to the XML file or <code>--stop-on-failure</code> on the command line.</li>
+<li>Unit tests can also easily be run using a local <code>php</code> interpreter, basically just run them in PhpStorm.</li>
+</ul>
+<h3 id="running-and-debugging-tests-from-phpstorm">Running and debugging tests from PhpStorm<a class="headerlink" href="#running-and-debugging-tests-from-phpstorm" title="Permanent link">&para;</a></h3>
+<p>PhpStorm makes it easy to select specific tests and to debug them. Also, if you stop debugging, you will see messages gathered so far. There is a one-time setup to go through.</p>
+<blockquote>
+<p>💡 If this doesn't work for you, e.g., due to some Docker Compose bug in PhpStorm, you can <a href="#starting-debugging-session-from-command-line">start debugging from command line</a>.</p>
+</blockquote>
+<p>First, if you're using <em>Docker for Mac</em> or <em>Docker for Windows</em>, expose a daemon in Docker settings:</p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/101152/27441580-43a964c8-576e-11e7-9912-1be811f73c4b.png" /></p>
+<p>In PhpStorm, create a new Docker environment in <em>Settings</em> &gt; <em>Build, Execution, Deployment</em> &gt; <em>Docker</em>:</p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/101152/27441828-ec760098-576e-11e7-9251-670204bf2643.png" /></p>
+<p>In the Docker panel, you should now be able to connect:</p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/101152/27441986-508eb2e6-576f-11e7-83b6-20e9b6944619.png" /></p>
+<p>Next, define a remote interpreter. Make sure you have the <strong>PHP Docker</strong> plugin enabled and go to <em>Settings</em> &gt; <em>Languages &amp; Frameworks</em> &gt; <em>PHP</em>. Add a new interpreter there:</p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/101152/40119446-04674760-591d-11e8-9a53-43f61eb7de5c.png" /></p>
+<p>Note that the <code>docker-compose.yml</code> is at the repo root, not inside <code>./plugins/versionpress</code>:</p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/101152/40119401-de795a66-591c-11e8-97cd-8c14e7a1976c.png" /></p>
+<p>If this doesn't go smoothly, try unchecking the <em>Include parent environment variables</em> checkbox in the <em>Environment variables</em> field:</p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/101152/27796503-81cff2f4-600a-11e7-8cfb-96661f0281a9.png" /></p>
+<p>Select this CLI interpreter as the main one for the project and make sure the path mappings are correct:</p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/101152/40119974-51c4b528-591e-11e8-8d55-56fac37ffa18.png" /></p>
+<p>The final step is to set up a test framework in <em>PHP</em> &gt; <em>Test Frameworks</em>. Add a new <em>PHPUnit by Remote Interpreter</em>:</p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/101152/27797069-900fafce-600c-11e7-9ff9-db2d4507aa89.png" /></p>
+<p>Don't forget to set the <em>Default bootstrap file</em> to <code>/opt/versionpress/tests/phpunit-bootstrap.php</code>.</p>
+<p>Now you're ready to run the tests. For example, to run all unit tests, right-click the <code>Unit</code> folder and select <em>Run</em>:</p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/101152/27797266-48a041fc-600d-11e7-88f0-aa557eb02325.png" /></p>
+<p>Debugging also works, just select <em>Debug</em> instead of <em>Run</em>:</p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/101152/27797346-93e132ca-600d-11e7-8052-9b4790739747.png" /></p>
+<p>This works equally well other types of tests as well, for example, Selenium tests:</p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/101152/27797533-57f12904-600e-11e7-971b-08fd943aaf7b.png" /></p>
+<h3 id="starting-debugging-session-from-command-line">Starting debugging session from command line<a class="headerlink" href="#starting-debugging-session-from-command-line" title="Permanent link">&para;</a></h3>
+<p>This method is more universal and works for PhpStorm, VSCode and other IDEs. You generally do this:</p>
+<ol>
+<li>Set a breakpoint.</li>
+<li>Start listening in your IDE.</li>
+<li>Launch a debug-enabled script like <code>npm run tests:unit:debug</code> (see <a href="https://github.com/versionpress/versionpress/blob/master/package.json">package.json</a>).</li>
+</ol>
+<h4 id="phpstorm-example">PhpStorm example<a class="headerlink" href="#phpstorm-example" title="Permanent link">&para;</a></h4>
+<p>First, make sure you have the 'VersionPress-tests' server defined in <em>Settings &gt; Languages &amp; Frameworks &gt; PHP &gt; Servers</em>. If not, run <code>npm run init-phpstorm</code>.</p>
+<p>Then, set a breakpoint in some test and start listening for debug connections in the toolbar.</p>
+<p>Run <code>npm run tests:unit:debug</code> in the console, skip the first break at the <code>wp</code> binary and see your breakpoint hit:</p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/101152/40370369-66eda84e-5de0-11e8-88f5-9792421a92ab.png" /></p>
+<p>See <a href="https://confluence.jetbrains.com/display/PhpStorm/Debugging+PHP+CLI+scripts+with+PhpStorm">this JetBrains help page</a> for more.</p>
+<h4 id="vscode-example">VSCode example<a class="headerlink" href="#vscode-example" title="Permanent link">&para;</a></h4>
+<p>In VSCode, install <a href="https://marketplace.visualstudio.com/items?itemName=felixfbecker.php-debug">PHP Debug extension</a> and create a <code>launch.json</code> config containing this:</p>
+<div class="codehilite"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;PHP: Listen for Xdebug&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;php&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;request&quot;</span><span class="p">:</span> <span class="s2">&quot;launch&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;port&quot;</span><span class="p">:</span> <span class="mi">9000</span><span class="p">,</span>
+  <span class="nt">&quot;pathMappings&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;/opt/versionpress&quot;</span><span class="p">:</span> <span class="s2">&quot;${workspaceRoot}/plugins/versionpress&quot;</span><span class="p">,</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+<p>Then, start a debugging session in VSCode and set a breakpoint. Run the <code>tests:unit:debug</code> script and see the breakpoint hit:</p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/101152/40372175-7880a49a-5de4-11e8-9e87-adfb25d184ef.png" /></p>
+<h3 id="unit-tests">Unit tests<a class="headerlink" href="#unit-tests" title="Permanent link">&para;</a></h3>
+<p>Unit tests are best suited for small pieces of algorithmic functionality. For example, <code>IniSerializer</code> is covered by unit tests extensively.</p>
+<p>You can either run unit tests in a dockerized environment as described above or set up a local CLI interpret which makes the execution faster and more convenient.</p>
+<h3 id="end2end-tests">End2end tests<a class="headerlink" href="#end2end-tests" title="Permanent link">&para;</a></h3>
+<p>End2end tests exercise a WordPress site and check that VersionPress creates the right Git commits, that the database is in correct state, etc. These tests are quite heavy and slow to run but if they pass, there's a good chance that VersionPress works correctly. (Before the project had these, long and painful manual testing period was necessary before each release.)</p>
+<p>End2end tests use the concept of <strong>workers</strong>: each test itself is implemented once but how e.g. a post is created or a user deleted is up to a specific worker. There are currently two types of workers:</p>
+<ol>
+<li><strong>WP-CLI workers</strong> – run WP-CLI commands against the test site.</li>
+<li><strong>Selenium workers</strong> – simulate real user by clicking in a browser.</li>
+</ol>
+<p>In the future, we might add REST API workers; you get the idea.</p>
+<p>Currently, the default worker is WP-CLI and the only way to switch workers is to update <code>tests/test-config.yml</code>, the <code>end2end-test-type</code> key. We'll make it more flexible in the future.</p>
+<p>After you've run the tests, the Docker stack is left up and running so that you can inspect it:</p>
+<ul>
+<li>The site is running at <a href="http://wordpress-for-tests/">http://wordpress-for-tests/</a> – <a href="https://www.howtogeek.com/howto/27350/beginner-geek-how-to-edit-your-hosts-file/">update your hosts file</a> accordingly and log in using the info in <code>test-config.yml</code>.</li>
+<li>The files are mapped to <code>./dev-env/wp-for-tests</code>, you can use your local Git client to inspect it.</li>
+<li>Connect to the database via <code>mysql -u root -p</code> or Adminer which you can access by running <code>docker-compose run -d --service-ports adminer</code> and visiting <a href="http://localhost:8099">http://localhost:8099</a>. The database name is <code>mysql-for-wordpress</code>.</li>
+</ul>
+<p>Stop the Docker stack with <code>npm run stop-and-cleanup</code> (stop-and-cleanup is strongly recommended here; end2end tests are not perfectly isolated yet).</p>
+<h3 id="other-tests">Other tests<a class="headerlink" href="#other-tests" title="Permanent link">&para;</a></h3>
+<p>The project has these other types of tests (folders in the <code>./plugins/versionpress/tests</code> folder and also test suite names in <code>phpunit.xml</code> so that you can run them using <code>--testsuite &lt;SuiteName&gt;</code>):</p>
+<ul>
+<li><code>GitRepositoryTests</code> – test Git repository manipulation in <code>GitRepository</code>.</li>
+<li><code>SynchronizerTests</code> – these are quite slow and test that given some INI files on disk, the database is in a correct state after synchronization runs.</li>
+<li><code>StorageTests</code> – test that entities are stored correctly as INI files.</li>
+<li><code>LoadTests</code> – they are run together with other tests but with very few iterations; manually update their source files and execute them separately to properly exercise them.</li>
+<li><code>Selenium</code> – a bit like end2end tests but for rarer cases, like VersionPress not being activated yet.</li>
+<li><code>Workflow</code> – exercise cloning and merging between environments.</li>
+</ul>
+<h2 id="frontend-development">Frontend development<a class="headerlink" href="#frontend-development" title="Permanent link">&para;</a></h2>
+<p>VersionPress uses a JavaScript frontend implemented as a React app in the <code>./frontend</code> folder.</p>
+<h3 id="phpstorm-webstorm-setup">PhpStorm / WebStorm setup<a class="headerlink" href="#phpstorm-webstorm-setup" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Run <code>npm run init-phpstorm</code> if you haven't done that already.</li>
+<li>Open the <code>frontend</code> project in PhpStorm.</li>
+<li>Answer "No" to <em>Compile TypeScript to JavaScript?</em> prompt.</li>
+</ol>
+<p>Linting task is set up for the frontend project. Run <code>npm run lint</code> in the <code>frontend</code> directory.</p>
+<h3 id="running-frontend-separately">Running frontend separately<a class="headerlink" href="#running-frontend-separately" title="Permanent link">&para;</a></h3>
+<p>For pure frontend development, it's more convenient to run it outside of the WordPress administration. Let's assume you run the frontend against the default Docker site.</p>
+<ol>
+<li>Make sure that the site is running and that VersionPress is activated in it. You should be able to visit <code>http://localhost</code> in the browser and the <code>frontend/src/config/config.local.ts</code> should contain this URL as API root.</li>
+<li>In your test WordPress site, put this to <code>wp-config.php</code> (the file should be editable at <code>./dev-env/wp/wp-config.php</code>):
+    <div class="codehilite"><pre><span></span>define(&#39;VERSIONPRESS_REQUIRE_API_AUTH&#39;, false);
+</pre></div></li>
+<li>Run <code>npm start</code> in the <code>frontend</code> directory.</li>
+</ol>
+<p>This launches <a href="https://webpack.js.org/configuration/dev-server/">webpack dev server</a> at <a href="http://localhost:8888">http://localhost:8888</a>:</p>
+<p><img alt="image" src="https://cloud.githubusercontent.com/assets/101152/26268495/c4738ff0-3cef-11e7-90ce-b807cc085865.png" /></p>
+<p>Source code edits will be automatically reflected in the browser.</p>
+<h2 id="production-build">Production build<a class="headerlink" href="#production-build" title="Permanent link">&para;</a></h2>
+<p>Run <code>npm run build</code>, it will produce a file like <code>dist/versionpress-3.0.2.zip</code>.</p>
+<p>The version number is based on the nearest Git tag and can also be something like <code>3.0.2-27-g0e1ce7f</code> meaning that the closest tag is <code>3.0.2</code>, there have been 27 commits since then and the package was built from <code>0e1ce7f</code>. See <a href="https://git-scm.com/docs/git-describe#_examples"><code>git describe --tags</code></a> for more examples.</p>
+<h2 id="developing-the-dev-setup">Developing the dev setup<a class="headerlink" href="#developing-the-dev-setup" title="Permanent link">&para;</a></h2>
+<p>Meta! If you're working on updating the dev setup (this document, Docker images, etc.), here are some tips for you.</p>
+<h3 id="npm-scripts">npm scripts<a class="headerlink" href="#npm-scripts" title="Permanent link">&para;</a></h3>
+<p>Simpler tasks are scripted directly in <code>package.json</code>, more complex ones in the <code>./scripts</code> folder, see for example <code>scripts/build.ts</code>.</p>
+<p>To debug the scripts in VSCode, run the script via <code>debug-script</code>, e.g.:</p>
+<div class="codehilite"><pre><span></span>npm run debug-script scripts/init-dev.ts
+</pre></div>
+
+<p>Then in VSCode, create a "Node attach" configuration and run it.</p>
+<h3 id="building-and-pushing-images">Building and pushing images<a class="headerlink" href="#building-and-pushing-images" title="Permanent link">&para;</a></h3>
+<p>We're keeping our images close to two <a href="https://hub.docker.com/_/wordpress/">official ones</a>, <a href="https://github.com/docker-library/wordpress/blob/master/php7.2/apache/Dockerfile"><code>wordpress:php7.2-apache</code></a> and <a href="https://github.com/docker-library/wordpress/blob/master/php7.2/cli/Dockerfile"><code>wordpress:cli</code></a>.</p>
+<p>The only goal of our images is to be close to the official project and have the right environment in it, e.g., the PHP version. We don't care that much about specific WordPress versions (WordPress is often installed dynamically anyway, based on <code>test-config.yml</code>) so we only use "vague" tags like <code>php7.2-apache</code> or <code>cli</code>.</p>
+<p>To build and push tags to Docker Hub:</p>
+<ol>
+<li><code>npm run build-images</code></li>
+<li><code>docker login</code></li>
+<li><code>npm run push-images</code></li>
+</ol>
+<p>You can get Docker Hub digests by running:</p>
+<div class="codehilite"><pre><span></span>$ npm run get-image-digests
+
+cli sha256:11c49ba4d7198c17660f30e8db4d00ca356b1c4414f338076bf99ab4dd295184
+php7.2-apache sha256:39ed34f84a5ccf8ab47eb1db4041c226ffe6f874127ead4c26f0b607457b7377
+</pre></div>
+
+<h3 id="links-to-older-documents">Links to older documents<a class="headerlink" href="#links-to-older-documents" title="Permanent link">&para;</a></h3>
+<p>Legacy approach is documented at the <code>4.0-alpha1</code> tag:</p>
+<ul>
+<li><a href="https://github.com/versionpress/versionpress/blob/4.0-alpha1/docs/Dev-Setup.md">Dev-Setup.md</a></li>
+<li><a href="https://github.com/versionpress/versionpress/blob/4.0-alpha1/docs/Testing.md">Testing.md</a></li>
+</ul>
+<h2 id="docker-tips">Docker tips<a class="headerlink" href="#docker-tips" title="Permanent link">&para;</a></h2>
+<p>Here are some tips for working with Docker / Docker Compose:</p>
+<ul>
+<li>Aliasing <code>docker-compose</code> to <code>dc</code> will save you some typing.</li>
+<li>Values in <code>docker-compose.yml</code> can be customized via <code>docker-compose.override.yml</code>.</li>
+</ul>
+<h2 id="windows-tips">Windows tips<a class="headerlink" href="#windows-tips" title="Permanent link">&para;</a></h2>
+<h3 id="git-bash">Git Bash<a class="headerlink" href="#git-bash" title="Permanent link">&para;</a></h3>
+<p>As noted in <a href="#getting-started">Getting started</a>, we only support Git Bash on Windows, a shell that comes with <a href="https://gitforwindows.org/">Git for Windows</a>. <code>cmd.exe</code> or PowerShell will not work as we use Linux-style syntax (single quotes, setting environment variables, etc.) and tools like <code>curl</code> or <code>rm -rf</code> in scripts.</p>
+<p>Git Bash is generally an awesome shell, the only problems you might encounter are related to paths. For example, Docker messes with them and when you try to run <code>docker run --rm -it ubuntu /bin/bash</code>, you'll see an error like <code>C:/Program Files/Git/usr/bin/bash.exe: no such file or directory</code>. Docker prepends <code>C:/Program Files/Git</code> for some reason but you can <a href="https://gist.github.com/borekb/cb1536a3685ca6fc0ad9a028e6a959e3">use this workaround</a> or use double slash like <code>//bin/bash</code>.</p>
+<h3 id="docker-for-windows">Docker for Windows<a class="headerlink" href="#docker-for-windows" title="Permanent link">&para;</a></h3>
+<p>If you can, use <a href="https://www.docker.com/docker-windows">Docker for Windows</a>, not <a href="https://docs.docker.com/toolbox/toolbox_install_windows/">Docker Toolbox</a>. The experience will be generally smoother.</p>
+<p>If you need to use Docker Toolbox:</p>
+<ul>
+<li>Enable port forwarding in VirtualBox (especially for ports 80, 3306, 8080 and 8099), see <a href="https://stackoverflow.com/questions/42866013/docker-toolbox-localhost-not-working/45822356#45822356">details</a>.</li>
+<li>Docker Toolbox is slower, but you can try to adjust system performance in VirtualBox settings. However, you can run into timeout issues in Workflow tests sometimes and exceed default value of 5 seconds in <code>wp_remote_get()</code> in End2End tests.</li>
+<li>Run Git Bash and Docker Quickstart Terminal as an Administrator to avoid potential problems (for example permissions and symlinks).</li>
+</ul>
+<h3 id="disable-antivirus-software">Disable antivirus software<a class="headerlink" href="#disable-antivirus-software" title="Permanent link">&para;</a></h3>
+<p>You might want to disable your antivirus software when working with Docker. Recommendations differ between version, please look it up.</p>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../../troubleshooting/iis/" title="IIS" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                IIS
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../plugin-support/" title="Plugin Support" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Plugin Support
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2018 VersionPress
+          </div>
+        
+        powered by
+        <a href="http://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+        
+  <div class="md-footer-social">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+      <a href="https://github.com/versionpress" class="md-footer-social__link fa fa-github"></a>
+    
+      <a href="https://twitter.com/versionpress" class="md-footer-social__link fa fa-twitter"></a>
+    
+      <a href="https://facebook.com/VersionPress" class="md-footer-social__link fa fa-facebook"></a>
+    
+      <a href="https://blog.versionpress.net/" class="md-footer-social__link fa fa-wordpress"></a>
+    
+  </div>
+
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../../assets/javascripts/application.b438e6c5.js"></script>
+      
+      <script>app.initialize({version:"0.17.3",url:{base:"../../.."}})</script>
+      
+        <script src="../../../assets/javascripts/extra.js"></script>
+      
+    
+    
+      
+        <script>!function(e,a,t,n,o,c,i){e.GoogleAnalyticsObject=o,e.ga=e.ga||function(){(e.ga.q=e.ga.q||[]).push(arguments)},e.ga.l=1*new Date,c=a.createElement(t),i=a.getElementsByTagName(t)[0],c.async=1,c.src="https://www.google-analytics.com/analytics.js",i.parentNode.insertBefore(c,i)}(window,document,"script",0,"ga"),ga("create","UA-51665915-2","auto"),ga("set","anonymizeIp",!0),ga("send","pageview");var links=document.getElementsByTagName("a");if(Array.prototype.map.call(links,function(e){e.host!=document.location.host&&e.addEventListener("click",function(){var a=e.getAttribute("data-md-action")||"follow";ga("send","event","outbound",a,e.href)})}),document.forms.search){var query=document.forms.search.query;query.addEventListener("blur",function(){if(this.value){var e=document.location.pathname;ga("send","pageview",e+"?q="+this.value)}})}</script>
+      
+    
+  </body>
+</html>

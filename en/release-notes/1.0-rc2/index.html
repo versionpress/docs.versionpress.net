@@ -1,0 +1,1383 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Keep for compatibility, see http://bit.ly/2tMB6ag -->
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+
+    <!-- Page description -->
+    
+    <meta name="description" content="User and developer documentation for VersionPress" />
+    
+
+    <!-- Canonical -->
+    
+
+    <!-- Page author -->
+    
+
+    <!-- Localization -->
+    
+    <meta name="lang:clipboard.copy" content="Copy to clipboard" />
+    
+    <meta name="lang:clipboard.copied" content="Copied to clipboard" />
+    
+    <meta name="lang:search.language" content="en" />
+    
+    <meta name="lang:search.pipeline.stopwords" content="True" />
+    
+    <meta name="lang:search.pipeline.trimmer" content="True" />
+    
+    <meta name="lang:search.result.none" content="No matching documents" />
+    
+    <meta name="lang:search.result.one" content="1 matching document" />
+    
+    <meta name="lang:search.result.other" content="# matching documents" />
+    
+    <meta name="lang:search.tokenizer" content="[\s\-\.]+" />
+    
+
+    <!-- Favicon -->
+    <link rel="shortcut icon"
+        href="https://user-images.githubusercontent.com/101152/41179166-07f4a0b2-6b6a-11e8-98f1-c21d285dbb48.png">
+
+    <!-- Generator banner -->
+    <meta name="generator"
+        content="mkdocs-0.17.3, $md-name$-$md-version$" />
+
+    
+      
+        <title>1.0-rc2 Release Notes - VersionPress Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/application.8d40d89b.css">
+      
+        <link rel="stylesheet" href="../../../assets/stylesheets/application-palette.6079476c.css">
+      
+    
+    
+      <script src="../../../assets/javascripts/modernizr.1aa3b519.js"></script>
+    
+    
+      <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+      
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Helvetica+Neue:300,400,400i,700|Consolas">
+        <style>body,input{font-family:"Helvetica Neue","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Consolas","Courier New",Courier,monospace}</style>
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/extra.css">
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="white" data-md-color-accent="light-blue">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448"
+    viewBox="0 0 416 448" id="github">
+  <path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19-18.125
+        8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19 18.125-8.5
+        18.125 8.5 10.75 19 3.125 20.5zM320 304q0 10-3.125 20.5t-10.75
+        19-18.125 8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19
+        18.125-8.5 18.125 8.5 10.75 19 3.125 20.5zM360
+        304q0-30-17.25-51t-46.75-21q-10.25 0-48.75 5.25-17.75 2.75-39.25
+        2.75t-39.25-2.75q-38-5.25-48.75-5.25-29.5 0-46.75 21t-17.25 51q0 22 8
+        38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0
+        37.25-1.75t35-7.375 30.5-15 20.25-25.75 8-38.375zM416 260q0 51.75-15.25
+        82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5-41.75
+        1.125q-19.5 0-35.5-0.75t-36.875-3.125-38.125-7.5-34.25-12.875-30.25-20.25-21.5-28.75q-15.5-30.75-15.5-82.75
+        0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25
+        30.875q36.75-8.75 77.25-8.75 37 0 70 8 26.25-20.5
+        46.75-30.25t47.25-9.75q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34
+        99.5z" />
+</svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+    
+      <a href="#10-rc2-release-notes" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../../.." title="VersionPress Documentation" class="md-header-nav__button md-logo">
+          
+            <img src="https://user-images.githubusercontent.com/101152/41179166-07f4a0b2-6b6a-11e8-98f1-c21d285dbb48.png" width="24" height="24">
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            
+              <span class="md-header-nav__topic">
+                VersionPress Documentation
+              </span>
+              <span class="md-header-nav__topic">
+                1.0-rc2 Release Notes
+              </span>
+            
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          
+            <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+            
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+
+  <a href="https://github.com/versionpress/versionpress/" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      versionpress/versionpress
+    </div>
+  </a>
+
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="drawer">
+    <span class="md-nav__button md-logo">
+      
+        <img src="https://user-images.githubusercontent.com/101152/41179166-07f4a0b2-6b6a-11e8-98f1-c21d285dbb48.png" width="48" height="48">
+      
+    </span>
+    VersionPress Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+
+  <a href="https://github.com/versionpress/versionpress/" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      versionpress/versionpress
+    </div>
+  </a>
+
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../.." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      Getting Started
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Getting Started
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../getting-started/" title="Getting Started Home" class="md-nav__link">
+      Getting Started Home
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../getting-started/concepts/" title="Basic Concepts" class="md-nav__link">
+      Basic Concepts
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../getting-started/installation-uninstallation/" title="Installation and Uninstallation" class="md-nav__link">
+      Installation and Uninstallation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../getting-started/configuration/" title="Configuration" class="md-nav__link">
+      Configuration
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../getting-started/using-versionpress/" title="Using VersionPress" class="md-nav__link">
+      Using VersionPress
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../getting-started/about-eap/" title="Developer Preview" class="md-nav__link">
+      Developer Preview
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      Feature Focus
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        Feature Focus
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../feature-focus/" title="Feature Focus Home" class="md-nav__link">
+      Feature Focus Home
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../feature-focus/how-versionpress-works/" title="How VersionPress Works" class="md-nav__link">
+      How VersionPress Works
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../feature-focus/change-tracking/" title="Change Tracking" class="md-nav__link">
+      Change Tracking
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../feature-focus/undo-and-rollback/" title="Undo and Rollback" class="md-nav__link">
+      Undo and Rollback
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../feature-focus/searching-history/" title="Searching History" class="md-nav__link">
+      Searching History
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../feature-focus/external-plugins/" title="External Plugins and Themes" class="md-nav__link">
+      External Plugins and Themes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../feature-focus/custom-project-structure/" title="Custom Project Structure" class="md-nav__link">
+      Custom Project Structure
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../feature-focus/wp-cli/" title="WP-CLI Commands" class="md-nav__link">
+      WP-CLI Commands
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../feature-focus/git/" title="Versioning Engine - Git" class="md-nav__link">
+      Versioning Engine - Git
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../feature-focus/performance/" title="Performance Considerations" class="md-nav__link">
+      Performance Considerations
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      Sync / Team Workflows
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        Sync / Team Workflows
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../sync/" title="Sync / Team Workflows Home" class="md-nav__link">
+      Sync / Team Workflows Home
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../sync/concepts/" title="Concepts" class="md-nav__link">
+      Concepts
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../sync/cloning/" title="Cloning a Site" class="md-nav__link">
+      Cloning a Site
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../sync/merging/" title="Merging Sites" class="md-nav__link">
+      Merging Sites
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      3rd Party Integrations
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        3rd Party Integrations
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../integrations/" title="3rd Party Integrations Home" class="md-nav__link">
+      3rd Party Integrations Home
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../integrations/plugins/" title="Plugins" class="md-nav__link">
+      Plugins
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../integrations/themes/" title="Themes" class="md-nav__link">
+      Themes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../integrations/hosts/" title="Hosts" class="md-nav__link">
+      Hosts
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      Troubleshooting
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        Troubleshooting
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../troubleshooting/" title="Troubleshooting Home" class="md-nav__link">
+      Troubleshooting Home
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../troubleshooting/system-info-page/" title="System Info Page" class="md-nav__link">
+      System Info Page
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../troubleshooting/ui-not-loading/" title="UI Not Loading" class="md-nav__link">
+      UI Not Loading
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../troubleshooting/iis/" title="IIS" class="md-nav__link">
+      IIS
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+    
+    <label class="md-nav__link" for="nav-7">
+      Developer
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        Developer
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../developer/dev-setup/" title="Dev Setup" class="md-nav__link">
+      Dev Setup
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../developer/plugin-support/" title="Plugin Support" class="md-nav__link">
+      Plugin Support
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../developer/development-process/" title="Development Process" class="md-nav__link">
+      Development Process
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8" checked>
+    
+    <label class="md-nav__link" for="nav-8">
+      Release Notes
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-8">
+        Release Notes
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../" title="Release Notes Home" class="md-nav__link">
+      Release Notes Home
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../roadmap/" title="Roadmap" class="md-nav__link">
+      Roadmap
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../4.0-beta/" title="4.0-beta Release Notes" class="md-nav__link">
+      4.0-beta Release Notes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../4.0-alpha1/" title="4.0-alpha1 Release Notes" class="md-nav__link">
+      4.0-alpha1 Release Notes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../3.0.2/" title="3.0.2 Release Notes" class="md-nav__link">
+      3.0.2 Release Notes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../3.0.1/" title="3.0.1 Release Notes" class="md-nav__link">
+      3.0.1 Release Notes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../3.0/" title="3.0 Release Notes" class="md-nav__link">
+      3.0 Release Notes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../2.2/" title="2.2 Release Notes" class="md-nav__link">
+      2.2 Release Notes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../2.1.1/" title="2.1.1 Release Notes" class="md-nav__link">
+      2.1.1 Release Notes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../2.1/" title="2.1 Release Notes" class="md-nav__link">
+      2.1 Release Notes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../2.0.1/" title="2.0.1 Release Notes" class="md-nav__link">
+      2.0.1 Release Notes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../2.0/" title="2.0 Release Notes" class="md-nav__link">
+      2.0 Release Notes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../1.0.1/" title="1.0.1 Release Notes" class="md-nav__link">
+      1.0.1 Release Notes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../1.0/" title="1.0 Release Notes" class="md-nav__link">
+      1.0 Release Notes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../1.0-rc3/" title="1.0-rc3 Release Notes" class="md-nav__link">
+      1.0-rc3 Release Notes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        1.0-rc2 Release Notes
+      </label>
+    
+    <a href="./" title="1.0-rc2 Release Notes" class="md-nav__link md-nav__link--active">
+      1.0-rc2 Release Notes
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#release-details" title="Release details" class="md-nav__link">
+    Release details
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#usage-notes" title="Usage notes" class="md-nav__link">
+    Usage notes
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#upgrade-from-previous-versions" title="Upgrade from previous versions" class="md-nav__link">
+    Upgrade from previous versions
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#known-issues" title="Known issues" class="md-nav__link">
+    Known issues
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../1.0-rc1/" title="1.0-rc1 Release Notes" class="md-nav__link">
+      1.0-rc1 Release Notes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../1.0-beta2/" title="1.0-beta2 Release Notes" class="md-nav__link">
+      1.0-beta2 Release Notes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../1.0-beta1/" title="1.0-beta1 Release Notes" class="md-nav__link">
+      1.0-beta1 Release Notes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../1.0-alpha3/" title="1.0-alpha3 Release Notes" class="md-nav__link">
+      1.0-alpha3 Release Notes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../1.0-alpha2/" title="1.0-alpha2 Release Notes" class="md-nav__link">
+      1.0-alpha2 Release Notes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../1.0-alpha1/" title="1.0-alpha1 Release Notes" class="md-nav__link">
+      1.0-alpha1 Release Notes
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#release-details" title="Release details" class="md-nav__link">
+    Release details
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#usage-notes" title="Usage notes" class="md-nav__link">
+    Usage notes
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#upgrade-from-previous-versions" title="Upgrade from previous versions" class="md-nav__link">
+    Upgrade from previous versions
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#known-issues" title="Known issues" class="md-nav__link">
+    Known issues
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/versionpress/versionpress/edit/master/docs/content/en/release-notes/1.0-rc2.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                <h1 id="10-rc2-release-notes">1.0-rc2 Release Notes<a class="headerlink" href="#10-rc2-release-notes" title="Permanent link">&para;</a></h1>
+<p>This release does not contain many user-facing changes but is actually one of the biggest one in terms of internal updates. General polish will come as part of the next RC.</p>
+<p>Released on 26-Feb-2015; read the <a href="https://blog.versionpress.net/2015/02/1-0-rc2-released/">announcement blog post</a>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note: this is a preview release</p>
+<p>Release Candidate means that it contains almost all the planned features for the release and that the stability is quite good. However, not all items on our task list are checked yet so still still qualifies as a preview release.</p>
+</div>
+<h2 id="release-details">Release details<a class="headerlink" href="#release-details" title="Permanent link">&para;</a></h2>
+<p>Highlights of this release are:</p>
+<ul>
+<li>
+<p><strong>Confirmation popup before Undo / Rollback</strong>. This is the only GUI change in this release and we have added it to make it clear that during the EAP period, reverts are not entirely safe operations. Also, during the popup display time the following background check is done:</p>
+</li>
+<li>
+<p><strong>Pre-revert check for clean working directory</strong>. When a custom change like manually edited theme file is recognized on the file system, revert is not allowed (could possibly lose user changes).</p>
+</li>
+<li>
+<p><strong>Two-way "foreign key" checks before reverts</strong>. In previous releases we had checks towards <em>parent</em> entities, for example, when reverting a post deletion, it was checked that the user owning the post still existed. We now also check <em>child</em> entities, for example, if the post creation is being reverted, it is now checked that there are no comments to that post (revert would have "orphaned" them).</p>
+</li>
+<li>
+<p><strong>Improved pre-activation checks</strong>. One of the biggest source of bug reports in previous releases was when VersionPress was installed into an environment that technically worked but was not really supported. We are continually implementing more checks and these are the new ones in RC2:</p>
+<ul>
+<li>The site is not Multisite</li>
+<li>The directories use standard WP layout</li>
+<li><code>.gitignore</code> must either not exist or contain certain rules</li>
+<li>Web server must allow <code>.htaccess</code> or <code>web.config</code> files (this is a <em>weak check</em> – the initialization can continue even if this is not fulfilled and it is up to the user to correct that later)</li>
+<li>Warning about possible timeout is displayed for sites with more than 500 entities</li>
+</ul>
+</li>
+<li>
+<p><strong>System info page</strong> for troubleshooting. From the pre-activation screen there is now a link to the system details page that will list info e.g. about the Git version installed, PHP version, installed WordPress plugins etc.</p>
+</li>
+<li>
+<p><strong>Customization mechanism</strong> and a <strong>customizable Git binary</strong>. One of the most common reports we were getting was "I have Git installed on my server but VersionPress still complains it's missing". Most often, the reason is that Git is installed for a different user than the web server is run as so it's not in its PATH. The Git binary can now be specified using a <code>vpconfig.neon</code> file, see <a href="../../getting-started/configuration/">Configuration</a>.</p>
+</li>
+<li>
+<p><strong>Initial support for large sites</strong>. WordPress installations that contain thousands (or tens or hundreds of thousands) of entities are not a focus for v1 but we still need to make sure that we will be able to support that. So in RC2, we have updated the internal format for storing database entities and have done some initial optimization work on synchronizing entities back to the database. There is more work to come in both RC3 and future updates – for example, initializing VersionPress will currently time out on a large site and we will have a fix for that.</p>
+<p>Note that the format change means that <strong>there is no upgrade path from RC1 and previous releases to RC2</strong>. See upgrade instructions below.</p>
+</li>
+<li>
+<p><strong>More standard error handling / logging</strong>. Up until now VersionPress captured all sorts of errors and even replaced HTTP 500 error page which was useful for debugging but not in line with how WordPress error handling / logging works. That has been removed now.</p>
+</li>
+<li>
+<p><strong>WP-CLI script for site recovery</strong>. More in this area to come.</p>
+</li>
+<li>
+<p><strong>Further investments in testing</strong>. In RC2, we finally have a test suite that covers many of the high-level scenarios using Selenium tests and some of the core functionality with unit tests. We also have a Vagrant-based environment for cross-platform testing.</p>
+</li>
+<li>
+<p><strong><code>X-VP-Version</code> tag in commits</strong>. In allows future versions of VersionPress see which release created which commit (we have scenarios when this is useful).</p>
+</li>
+<li>
+<p><strong>Minor improvements to automatic change tracking</strong>. For example, options have now implemented priorities so that the more important ones appear closer to the top.</p>
+</li>
+<li>
+<p>Some <strong>important internal fixes</strong> in things like INI serialization etc.</p>
+</li>
+</ul>
+<h2 id="usage-notes">Usage notes<a class="headerlink" href="#usage-notes" title="Permanent link">&para;</a></h2>
+<p>System requirements for this release are:</p>
+<ul>
+<li>PHP 5.3 or later</li>
+<li>WordPress 3.9 or later (latest release recommended)</li>
+<li>Git 1.9 or later</li>
+</ul>
+<h3 id="upgrade-from-previous-versions">Upgrade from previous versions<a class="headerlink" href="#upgrade-from-previous-versions" title="Permanent link">&para;</a></h3>
+<p>There is no upgrade path from previous versions, sorry. You have to deactivate VersionPress, upload the new version and fully reactivate again. The site history will be retained in the old format but will not be actionable – there will be no way to revert to it, etc. This is due to the change of the internal storage format, see above.</p>
+<h2 id="known-issues">Known issues<a class="headerlink" href="#known-issues" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Reverts are slow on sites with many entities. This will be improved in some future update.</li>
+<li>A couple of minor issues in automatic change tracking are still left and will be fixed in the final 1.0 release.</li>
+</ul>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../1.0-rc3/" title="1.0-rc3 Release Notes" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                1.0-rc3 Release Notes
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../1.0-rc1/" title="1.0-rc1 Release Notes" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                1.0-rc1 Release Notes
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2018 VersionPress
+          </div>
+        
+        powered by
+        <a href="http://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+        
+  <div class="md-footer-social">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+      <a href="https://github.com/versionpress" class="md-footer-social__link fa fa-github"></a>
+    
+      <a href="https://twitter.com/versionpress" class="md-footer-social__link fa fa-twitter"></a>
+    
+      <a href="https://facebook.com/VersionPress" class="md-footer-social__link fa fa-facebook"></a>
+    
+      <a href="https://blog.versionpress.net/" class="md-footer-social__link fa fa-wordpress"></a>
+    
+  </div>
+
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../../assets/javascripts/application.b438e6c5.js"></script>
+      
+      <script>app.initialize({version:"0.17.3",url:{base:"../../.."}})</script>
+      
+        <script src="../../../assets/javascripts/extra.js"></script>
+      
+    
+    
+      
+        <script>!function(e,a,t,n,o,c,i){e.GoogleAnalyticsObject=o,e.ga=e.ga||function(){(e.ga.q=e.ga.q||[]).push(arguments)},e.ga.l=1*new Date,c=a.createElement(t),i=a.getElementsByTagName(t)[0],c.async=1,c.src="https://www.google-analytics.com/analytics.js",i.parentNode.insertBefore(c,i)}(window,document,"script",0,"ga"),ga("create","UA-51665915-2","auto"),ga("set","anonymizeIp",!0),ga("send","pageview");var links=document.getElementsByTagName("a");if(Array.prototype.map.call(links,function(e){e.host!=document.location.host&&e.addEventListener("click",function(){var a=e.getAttribute("data-md-action")||"follow";ga("send","event","outbound",a,e.href)})}),document.forms.search){var query=document.forms.search.query;query.addEventListener("blur",function(){if(this.value){var e=document.location.pathname;ga("send","pageview",e+"?q="+this.value)}})}</script>
+      
+    
+  </body>
+</html>

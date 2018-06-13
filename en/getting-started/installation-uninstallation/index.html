@@ -1,0 +1,1545 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Keep for compatibility, see http://bit.ly/2tMB6ag -->
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+
+    <!-- Page description -->
+    
+    <meta name="description" content="User and developer documentation for VersionPress" />
+    
+
+    <!-- Canonical -->
+    
+
+    <!-- Page author -->
+    
+
+    <!-- Localization -->
+    
+    <meta name="lang:clipboard.copy" content="Copy to clipboard" />
+    
+    <meta name="lang:clipboard.copied" content="Copied to clipboard" />
+    
+    <meta name="lang:search.language" content="en" />
+    
+    <meta name="lang:search.pipeline.stopwords" content="True" />
+    
+    <meta name="lang:search.pipeline.trimmer" content="True" />
+    
+    <meta name="lang:search.result.none" content="No matching documents" />
+    
+    <meta name="lang:search.result.one" content="1 matching document" />
+    
+    <meta name="lang:search.result.other" content="# matching documents" />
+    
+    <meta name="lang:search.tokenizer" content="[\s\-\.]+" />
+    
+
+    <!-- Favicon -->
+    <link rel="shortcut icon"
+        href="https://user-images.githubusercontent.com/101152/41179166-07f4a0b2-6b6a-11e8-98f1-c21d285dbb48.png">
+
+    <!-- Generator banner -->
+    <meta name="generator"
+        content="mkdocs-0.17.3, $md-name$-$md-version$" />
+
+    
+      
+        <title>Installation and Uninstallation - VersionPress Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/application.8d40d89b.css">
+      
+        <link rel="stylesheet" href="../../../assets/stylesheets/application-palette.6079476c.css">
+      
+    
+    
+      <script src="../../../assets/javascripts/modernizr.1aa3b519.js"></script>
+    
+    
+      <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+      
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Helvetica+Neue:300,400,400i,700|Consolas">
+        <style>body,input{font-family:"Helvetica Neue","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Consolas","Courier New",Courier,monospace}</style>
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/extra.css">
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="white" data-md-color-accent="light-blue">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448"
+    viewBox="0 0 416 448" id="github">
+  <path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19-18.125
+        8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19 18.125-8.5
+        18.125 8.5 10.75 19 3.125 20.5zM320 304q0 10-3.125 20.5t-10.75
+        19-18.125 8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19
+        18.125-8.5 18.125 8.5 10.75 19 3.125 20.5zM360
+        304q0-30-17.25-51t-46.75-21q-10.25 0-48.75 5.25-17.75 2.75-39.25
+        2.75t-39.25-2.75q-38-5.25-48.75-5.25-29.5 0-46.75 21t-17.25 51q0 22 8
+        38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0
+        37.25-1.75t35-7.375 30.5-15 20.25-25.75 8-38.375zM416 260q0 51.75-15.25
+        82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5-41.75
+        1.125q-19.5 0-35.5-0.75t-36.875-3.125-38.125-7.5-34.25-12.875-30.25-20.25-21.5-28.75q-15.5-30.75-15.5-82.75
+        0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25
+        30.875q36.75-8.75 77.25-8.75 37 0 70 8 26.25-20.5
+        46.75-30.25t47.25-9.75q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34
+        99.5z" />
+</svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+    
+      <a href="#installation-and-uninstallation" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../../.." title="VersionPress Documentation" class="md-header-nav__button md-logo">
+          
+            <img src="https://user-images.githubusercontent.com/101152/41179166-07f4a0b2-6b6a-11e8-98f1-c21d285dbb48.png" width="24" height="24">
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            
+              <span class="md-header-nav__topic">
+                VersionPress Documentation
+              </span>
+              <span class="md-header-nav__topic">
+                Installation and Uninstallation
+              </span>
+            
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          
+            <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+            
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+
+  <a href="https://github.com/versionpress/versionpress/" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      versionpress/versionpress
+    </div>
+  </a>
+
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="drawer">
+    <span class="md-nav__button md-logo">
+      
+        <img src="https://user-images.githubusercontent.com/101152/41179166-07f4a0b2-6b6a-11e8-98f1-c21d285dbb48.png" width="48" height="48">
+      
+    </span>
+    VersionPress Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+
+  <a href="https://github.com/versionpress/versionpress/" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      versionpress/versionpress
+    </div>
+  </a>
+
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../.." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
+    
+    <label class="md-nav__link" for="nav-2">
+      Getting Started
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Getting Started
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../" title="Getting Started Home" class="md-nav__link">
+      Getting Started Home
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../concepts/" title="Basic Concepts" class="md-nav__link">
+      Basic Concepts
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        Installation and Uninstallation
+      </label>
+    
+    <a href="./" title="Installation and Uninstallation" class="md-nav__link md-nav__link--active">
+      Installation and Uninstallation
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#system-requirements" title="System requirements" class="md-nav__link">
+    System requirements
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#git" title="Git" class="md-nav__link">
+    Git
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#supported-web-servers" title="Supported web servers" class="md-nav__link">
+    Supported web servers
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#php-56" title="PHP 5.6" class="md-nav__link">
+    PHP 5.6
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#project-structure" title="Project structure" class="md-nav__link">
+    Project structure
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installation" title="Installation" class="md-nav__link">
+    Installation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#update" title="Update" class="md-nav__link">
+    Update
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uninstallation" title="Uninstallation" class="md-nav__link">
+    Uninstallation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#versionpress-states-at-a-glance" title="VersionPress states at a glance" class="md-nav__link">
+    VersionPress states at a glance
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../configuration/" title="Configuration" class="md-nav__link">
+      Configuration
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../using-versionpress/" title="Using VersionPress" class="md-nav__link">
+      Using VersionPress
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../about-eap/" title="Developer Preview" class="md-nav__link">
+      Developer Preview
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      Feature Focus
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        Feature Focus
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../feature-focus/" title="Feature Focus Home" class="md-nav__link">
+      Feature Focus Home
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../feature-focus/how-versionpress-works/" title="How VersionPress Works" class="md-nav__link">
+      How VersionPress Works
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../feature-focus/change-tracking/" title="Change Tracking" class="md-nav__link">
+      Change Tracking
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../feature-focus/undo-and-rollback/" title="Undo and Rollback" class="md-nav__link">
+      Undo and Rollback
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../feature-focus/searching-history/" title="Searching History" class="md-nav__link">
+      Searching History
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../feature-focus/external-plugins/" title="External Plugins and Themes" class="md-nav__link">
+      External Plugins and Themes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../feature-focus/custom-project-structure/" title="Custom Project Structure" class="md-nav__link">
+      Custom Project Structure
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../feature-focus/wp-cli/" title="WP-CLI Commands" class="md-nav__link">
+      WP-CLI Commands
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../feature-focus/git/" title="Versioning Engine - Git" class="md-nav__link">
+      Versioning Engine - Git
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../feature-focus/performance/" title="Performance Considerations" class="md-nav__link">
+      Performance Considerations
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      Sync / Team Workflows
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        Sync / Team Workflows
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../sync/" title="Sync / Team Workflows Home" class="md-nav__link">
+      Sync / Team Workflows Home
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../sync/concepts/" title="Concepts" class="md-nav__link">
+      Concepts
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../sync/cloning/" title="Cloning a Site" class="md-nav__link">
+      Cloning a Site
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../sync/merging/" title="Merging Sites" class="md-nav__link">
+      Merging Sites
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      3rd Party Integrations
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        3rd Party Integrations
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../integrations/" title="3rd Party Integrations Home" class="md-nav__link">
+      3rd Party Integrations Home
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../integrations/plugins/" title="Plugins" class="md-nav__link">
+      Plugins
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../integrations/themes/" title="Themes" class="md-nav__link">
+      Themes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../integrations/hosts/" title="Hosts" class="md-nav__link">
+      Hosts
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      Troubleshooting
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        Troubleshooting
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../troubleshooting/" title="Troubleshooting Home" class="md-nav__link">
+      Troubleshooting Home
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../troubleshooting/system-info-page/" title="System Info Page" class="md-nav__link">
+      System Info Page
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../troubleshooting/ui-not-loading/" title="UI Not Loading" class="md-nav__link">
+      UI Not Loading
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../troubleshooting/iis/" title="IIS" class="md-nav__link">
+      IIS
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+    
+    <label class="md-nav__link" for="nav-7">
+      Developer
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        Developer
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../developer/dev-setup/" title="Dev Setup" class="md-nav__link">
+      Dev Setup
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../developer/plugin-support/" title="Plugin Support" class="md-nav__link">
+      Plugin Support
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../developer/development-process/" title="Development Process" class="md-nav__link">
+      Development Process
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
+    
+    <label class="md-nav__link" for="nav-8">
+      Release Notes
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-8">
+        Release Notes
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release-notes/" title="Release Notes Home" class="md-nav__link">
+      Release Notes Home
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release-notes/roadmap/" title="Roadmap" class="md-nav__link">
+      Roadmap
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release-notes/4.0-beta/" title="4.0-beta Release Notes" class="md-nav__link">
+      4.0-beta Release Notes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release-notes/4.0-alpha1/" title="4.0-alpha1 Release Notes" class="md-nav__link">
+      4.0-alpha1 Release Notes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release-notes/3.0.2/" title="3.0.2 Release Notes" class="md-nav__link">
+      3.0.2 Release Notes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release-notes/3.0.1/" title="3.0.1 Release Notes" class="md-nav__link">
+      3.0.1 Release Notes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release-notes/3.0/" title="3.0 Release Notes" class="md-nav__link">
+      3.0 Release Notes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release-notes/2.2/" title="2.2 Release Notes" class="md-nav__link">
+      2.2 Release Notes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release-notes/2.1.1/" title="2.1.1 Release Notes" class="md-nav__link">
+      2.1.1 Release Notes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release-notes/2.1/" title="2.1 Release Notes" class="md-nav__link">
+      2.1 Release Notes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release-notes/2.0.1/" title="2.0.1 Release Notes" class="md-nav__link">
+      2.0.1 Release Notes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release-notes/2.0/" title="2.0 Release Notes" class="md-nav__link">
+      2.0 Release Notes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release-notes/1.0.1/" title="1.0.1 Release Notes" class="md-nav__link">
+      1.0.1 Release Notes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release-notes/1.0/" title="1.0 Release Notes" class="md-nav__link">
+      1.0 Release Notes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release-notes/1.0-rc3/" title="1.0-rc3 Release Notes" class="md-nav__link">
+      1.0-rc3 Release Notes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release-notes/1.0-rc2/" title="1.0-rc2 Release Notes" class="md-nav__link">
+      1.0-rc2 Release Notes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release-notes/1.0-rc1/" title="1.0-rc1 Release Notes" class="md-nav__link">
+      1.0-rc1 Release Notes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release-notes/1.0-beta2/" title="1.0-beta2 Release Notes" class="md-nav__link">
+      1.0-beta2 Release Notes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release-notes/1.0-beta1/" title="1.0-beta1 Release Notes" class="md-nav__link">
+      1.0-beta1 Release Notes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release-notes/1.0-alpha3/" title="1.0-alpha3 Release Notes" class="md-nav__link">
+      1.0-alpha3 Release Notes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release-notes/1.0-alpha2/" title="1.0-alpha2 Release Notes" class="md-nav__link">
+      1.0-alpha2 Release Notes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release-notes/1.0-alpha1/" title="1.0-alpha1 Release Notes" class="md-nav__link">
+      1.0-alpha1 Release Notes
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#system-requirements" title="System requirements" class="md-nav__link">
+    System requirements
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#git" title="Git" class="md-nav__link">
+    Git
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#supported-web-servers" title="Supported web servers" class="md-nav__link">
+    Supported web servers
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#php-56" title="PHP 5.6" class="md-nav__link">
+    PHP 5.6
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#project-structure" title="Project structure" class="md-nav__link">
+    Project structure
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installation" title="Installation" class="md-nav__link">
+    Installation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#update" title="Update" class="md-nav__link">
+    Update
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uninstallation" title="Uninstallation" class="md-nav__link">
+    Uninstallation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#versionpress-states-at-a-glance" title="VersionPress states at a glance" class="md-nav__link">
+    VersionPress states at a glance
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/versionpress/versionpress/edit/master/docs/content/en/getting-started/installation-uninstallation.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                <h1 id="installation-and-uninstallation">Installation and Uninstallation<a class="headerlink" href="#installation-and-uninstallation" title="Permanent link">&para;</a></h1>
+<p>VersionPress ships as a standard plugin but there are two important things to be aware of:</p>
+<ol>
+<li>VersionPress has <strong>stricter system requirements</strong> than usual</li>
+<li>Its <strong>activation is a two-step process</strong></li>
+</ol>
+<p>Both things are important, please read on.</p>
+<h2 id="system-requirements">System requirements<a class="headerlink" href="#system-requirements" title="Permanent link">&para;</a></h2>
+<p>The server environment must match certain requirements, some of which are checked automatically on VersionPress activation. We also recommend some other setup steps below.</p>
+<figure style="width: 80%;">
+  <img src="https://cloud.githubusercontent.com/assets/101152/26038379/7f8dbaf0-3907-11e7-92f4-3d211ae0d882.png" alt="Pre-activation check" />
+  <figcaption>Pre-activation check performed by VersionPress</figcaption>
+</figure>
+
+<div class="admonition warning">
+<p class="admonition-title">Important</p>
+<p>VersionPress is a lot more involved than most other WordPress plugins. Please pay attention to this section before proceeding with installation.</p>
+</div>
+<p>Minimum system requirements are (as a general rule, <strong>we recommend using the latest versions of everything</strong>):</p>
+<ul>
+<li>WordPress 4.8 or higher</li>
+<li>PHP 5.6 or higher</li>
+<li>Git 1.9 or higher (2.13 or newer recommended)</li>
+<li>Apache, nginx or IIS 7+ web server</li>
+<li><code>proc_open()</code> enabled</li>
+<li>Write permissions in the site root and everywhere under it</li>
+<li>Standard WordPress configuration system (<code>wp-config.php</code>)</li>
+</ul>
+<p>On top of that, if you want to use the <a href="../../sync/">multi-instance / sync features</a> of VersionPress 2.0, probably even more control over the requirement will be required. In practice, this means that a custom server / VPS is your best bet. See also the section on <a href="../../integrations/hosts/">hosting providers</a>.</p>
+<p>Here are notes on some of the requirements:</p>
+<h3 id="git">Git<a class="headerlink" href="#git" title="Permanent link">&para;</a></h3>
+<p>VersionPress takes a strategic dependency on <a href="http://git-scm.com/">Git</a> which provides <a href="../../feature-focus/git/">many benefits</a> but also requires this tool to be installed on the server and accessible from PHP. Make sure that <code>proc_open()</code> is enabled on the server and that the Git installation is in the PATH (if it's not, you can tell VersionPress where to find the binary via <a href="../configuration/">Configuration</a>).</p>
+<p>Git <strong>1.9</strong> and newer are supported. Do not attempt to make VersionPress run with older releases (1.7 and 1.8 are still quite popular), there are known issues with them.</p>
+<h3 id="supported-web-servers">Supported web servers<a class="headerlink" href="#supported-web-servers" title="Permanent link">&para;</a></h3>
+<p>We recommend Apache or nginx (as <a href="https://wordpress.org/about/requirements/">WordPress itself</a>) but almost any web server should work. Just pay attention to two things:</p>
+<ol>
+<li><strong>Write permissions</strong>. The user that runs PHP and the eventual Git process needs to have write access into the locations listed below and the <code>sys_get_temp_dir()</code>. Initialization page checks this automatically and the <a href="../../troubleshooting/system-info-page/">system info page</a> has a dedicated section on permissions if you need more info.<ul>
+<li>IIS users, please <a href="../../troubleshooting/iis/">read this page</a>.</li>
+</ul>
+</li>
+<li><strong>Access rules</strong>. The locations listed below should be protected against direct requests.</li>
+</ol>
+<p>The sensitive locations are:</p>
+<ul>
+<li><code>/wp-content/vpdb</code></li>
+<li><code>/wp-content/vpbackups</code></li>
+<li><code>/wp-content/plugins/versionpress</code></li>
+<li><code>/.git</code></li>
+</ul>
+<p>We ship <code>.htaccess</code> rules for Apache, <code>web.config</code> rules for IIS and <code>wp-content/plugins/versionpress/versionpress-nginx.conf</code> template for nginx but please confirm manually that direct access to e.g. <code>yoursite/.git/config</code> is prevented.</p>
+<h3 id="php-56">PHP 5.6<a class="headerlink" href="#php-56" title="Permanent link">&para;</a></h3>
+<p>WordPress can run on an old and <a href="http://php.net/eol.php">long unsupported</a> PHP 5.2. We also started with this version but eventually dropped it so that we could use the newer language features and some 3<sup>rd</sup> party libraries. We recommend using one of the <a href="http://php.net/supported-versions.php">actively supported</a> PHP versions.</p>
+<p>Note: VersionPress is currently not being tested on HHVM.</p>
+<h3 id="project-structure">Project structure<a class="headerlink" href="#project-structure" title="Permanent link">&para;</a></h3>
+<p>Some advanced users like having WordPress in its own directory or move plugins, themes or uploads in another directory. VersionPress supports following scenarios:</p>
+<ul>
+<li>giving WordPress its own directory</li>
+<li>renaming <code>wp-content</code>, <code>plugins</code> or <code>uploads</code> directories.</li>
+</ul>
+<p>See <a href="../../feature-focus/custom-project-structure/">custom project structure</a> page for more.</p>
+<h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h2>
+<p>VersionPress can be obtained via the main <a href="https://versionpress.net/">versionpress.net website</a>. When you have the ZIP file, the installation is pretty standard:</p>
+<ol>
+<li>Log in to the admin screens</li>
+<li>Go to <em>Plugins &gt; Add New &gt; Upload</em></li>
+<li>Choose or drag&amp;drop <code>versionpress-&lt;version&gt;.zip</code> to that page</li>
+<li>Click <em>Install Now</em></li>
+<li>Activate the plugin</li>
+<li><strong>Finish the activation process</strong> by going into the new VersionPress section in the administration and clicking the <em>Activate</em> button</li>
+</ol>
+<p>The last step is important, otherwise VersionPress wouldn't be able to track changes. The on-screen instructions will guide you through it.</p>
+<p>Upon successful activation, you should see a screen like this:</p>
+<figure style="width: 80%;">
+  <img src="https://cloud.githubusercontent.com/assets/101152/26038360/1f325f26-3907-11e7-9993-0e25ff3299d7.png" alt="VersionPress activated" />
+  <figcaption>VersionPress successfully activated</figcaption>
+</figure>
+
+<h2 id="update">Update<a class="headerlink" href="#update" title="Permanent link">&para;</a></h2>
+<p>Since <a href="../../release-notes/3.0/">VersionPress 3.0</a>, the simplest way to update is to run the <code>wp vp update</code> command, e.g.:</p>
+<div class="codehilite"><pre><span></span>wp vp update ./versionpress.zip
+</pre></div>
+
+<p>This will keep the Git repo and continue tracking the site fine, however, keep in mind that the original history becomes unactionable: you will not be able to undo old changes or roll back to previous states. (<a href="https://github.com/versionpress/versionpress/issues/275">Full migrations</a> are on our roadmap).</p>
+<p>If you cannot use the WP-CLI update method, these are the manual steps:</p>
+<ol>
+<li>Put the site in a maintenance mode.</li>
+<li>Deactivate VersionPress (just deactivate, do not uninstall).</li>
+<li>Delete the contents of <code>wp-content/plugins/versionpress</code> and extract the new version there.</li>
+<li>Activate &amp; initialize the plugin again.</li>
+<li>Disable the maintenance mode.</li>
+</ol>
+<p>The difference from the automated method is that the internal representation of the database has been regenerated from scratch so you won't be able to track the history of database entities easily. We will improve the GUI update method in the future.</p>
+<h2 id="uninstallation">Uninstallation<a class="headerlink" href="#uninstallation" title="Permanent link">&para;</a></h2>
+<p>Uninstallation is a standard two-step process:</p>
+<ol>
+<li>You first <strong>deactivate</strong> the plugin on the <em>Plugins</em> admin screen</li>
+<li>You then <strong>delete</strong> the plugin to get rid of all its files<ul>
+<li><img alt="⚠️" class="emojione" src="https://cdn.jsdelivr.net/emojione/assets/svg/26a0.svg" title=":warning:" /> If you didn't deactivate the plugin via admin screens and manually removed the <code>wp-content/plugins/versionpress</code> folder (which is NOT recommended), you have to manually restore the <code>wp-db.php</code> file from <code>wp-db.php.original</code>.</li>
+</ul>
+</li>
+<li><em>Optional:</em> Manually download or delete a repository backup which was created under <code>wp-content/backup</code>.</li>
+</ol>
+<p>There are two important things to note:</p>
+<ul>
+<li>Once VersionPress is deactivated, <strong>it cannot be fully reactivated again on the same repository</strong>. This means that while you can initialize VersionPress again and the presence of the old repository will not be a problem, features like Undo or Rollback will only be available for <em>new</em> commits, created by the current activation of VersionPress. This is technical limitation that is not easy to overcome.</li>
+<li><strong>On uninstallation, the Git repository is moved to a backup folder</strong> under <code>wp-content/vpbackups</code>. You can download or recover it from there manually.<ul>
+<li>Note: VersionPress will only remove / backup the repository if it detects that it was VersionPress-initiated repository. If you created the Git repository manually before installing VersionPress the repository will not be touched.</li>
+</ul>
+</li>
+</ul>
+<h2 id="versionpress-states-at-a-glance">VersionPress states at a glance<a class="headerlink" href="#versionpress-states-at-a-glance" title="Permanent link">&para;</a></h2>
+<p>To sum up the previous text, here are the states that the site can be in:</p>
+<table>
+<thead>
+<tr>
+<th align="left">State</th>
+<th align="center">Git repo exists?</th>
+<th align="center">VersionPress tracking changes?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">WP site without VersionPress</td>
+<td align="center">No<sup>1)</sup></td>
+<td align="center">No</td>
+</tr>
+<tr>
+<td align="left">VersionPress installed</td>
+<td align="center">No</td>
+<td align="center">No</td>
+</tr>
+<tr>
+<td align="left">VersionPress activated on the <em>Plugins</em> screen</td>
+<td align="center"><strong>Still no</strong></td>
+<td align="center"><strong>Still no</strong></td>
+</tr>
+<tr>
+<td align="left">Activation finished on VersionPress screen - the plugin is <em>active</em></td>
+<td align="center"><strong>Yes</strong></td>
+<td align="center"><strong>Yes</strong></td>
+</tr>
+<tr>
+<td align="left">Deactivated (on plugin admin screen)</td>
+<td align="center">Yes</td>
+<td align="center"><strong>No</strong></td>
+</tr>
+<tr>
+<td align="left">VersionPress reactivated on the <em>Plugins</em> screen (similar to step 3)</td>
+<td align="center">Yes (but obsolete)</td>
+<td align="center"><strong>Still no</strong></td>
+</tr>
+<tr>
+<td align="left">Fully activated again (similar to step 4)</td>
+<td align="center">Yes</td>
+<td align="center"><strong>Yes</strong></td>
+</tr>
+<tr>
+<td align="left">Uninstalled</td>
+<td align="center"><strong>No</strong> (backed up)</td>
+<td align="center">No</td>
+</tr>
+</tbody>
+</table>
+<p><sup>1)</sup> The repo might exist if you created it manually or if VersionPress was previously installed. It is not a problem – VersionPress will happily add commits to the existing repository but a common scenario is that there is no default Git repository and VersionPress creates one.</p>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../concepts/" title="Basic Concepts" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Basic Concepts
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../configuration/" title="Configuration" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Configuration
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2018 VersionPress
+          </div>
+        
+        powered by
+        <a href="http://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+        
+  <div class="md-footer-social">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+      <a href="https://github.com/versionpress" class="md-footer-social__link fa fa-github"></a>
+    
+      <a href="https://twitter.com/versionpress" class="md-footer-social__link fa fa-twitter"></a>
+    
+      <a href="https://facebook.com/VersionPress" class="md-footer-social__link fa fa-facebook"></a>
+    
+      <a href="https://blog.versionpress.net/" class="md-footer-social__link fa fa-wordpress"></a>
+    
+  </div>
+
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../../assets/javascripts/application.b438e6c5.js"></script>
+      
+      <script>app.initialize({version:"0.17.3",url:{base:"../../.."}})</script>
+      
+        <script src="../../../assets/javascripts/extra.js"></script>
+      
+    
+    
+      
+        <script>!function(e,a,t,n,o,c,i){e.GoogleAnalyticsObject=o,e.ga=e.ga||function(){(e.ga.q=e.ga.q||[]).push(arguments)},e.ga.l=1*new Date,c=a.createElement(t),i=a.getElementsByTagName(t)[0],c.async=1,c.src="https://www.google-analytics.com/analytics.js",i.parentNode.insertBefore(c,i)}(window,document,"script",0,"ga"),ga("create","UA-51665915-2","auto"),ga("set","anonymizeIp",!0),ga("send","pageview");var links=document.getElementsByTagName("a");if(Array.prototype.map.call(links,function(e){e.host!=document.location.host&&e.addEventListener("click",function(){var a=e.getAttribute("data-md-action")||"follow";ga("send","event","outbound",a,e.href)})}),document.forms.search){var query=document.forms.search.query;query.addEventListener("blur",function(){if(this.value){var e=document.location.pathname;ga("send","pageview",e+"?q="+this.value)}})}</script>
+      
+    
+  </body>
+</html>

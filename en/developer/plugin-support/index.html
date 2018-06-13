@@ -1,0 +1,2162 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Keep for compatibility, see http://bit.ly/2tMB6ag -->
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+
+    <!-- Page description -->
+    
+    <meta name="description" content="User and developer documentation for VersionPress" />
+    
+
+    <!-- Canonical -->
+    
+
+    <!-- Page author -->
+    
+
+    <!-- Localization -->
+    
+    <meta name="lang:clipboard.copy" content="Copy to clipboard" />
+    
+    <meta name="lang:clipboard.copied" content="Copied to clipboard" />
+    
+    <meta name="lang:search.language" content="en" />
+    
+    <meta name="lang:search.pipeline.stopwords" content="True" />
+    
+    <meta name="lang:search.pipeline.trimmer" content="True" />
+    
+    <meta name="lang:search.result.none" content="No matching documents" />
+    
+    <meta name="lang:search.result.one" content="1 matching document" />
+    
+    <meta name="lang:search.result.other" content="# matching documents" />
+    
+    <meta name="lang:search.tokenizer" content="[\s\-\.]+" />
+    
+
+    <!-- Favicon -->
+    <link rel="shortcut icon"
+        href="https://user-images.githubusercontent.com/101152/41179166-07f4a0b2-6b6a-11e8-98f1-c21d285dbb48.png">
+
+    <!-- Generator banner -->
+    <meta name="generator"
+        content="mkdocs-0.17.3, $md-name$-$md-version$" />
+
+    
+      
+        <title>Plugin Support - VersionPress Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/application.8d40d89b.css">
+      
+        <link rel="stylesheet" href="../../../assets/stylesheets/application-palette.6079476c.css">
+      
+    
+    
+      <script src="../../../assets/javascripts/modernizr.1aa3b519.js"></script>
+    
+    
+      <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+      
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Helvetica+Neue:300,400,400i,700|Consolas">
+        <style>body,input{font-family:"Helvetica Neue","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Consolas","Courier New",Courier,monospace}</style>
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/extra.css">
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="white" data-md-color-accent="light-blue">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448"
+    viewBox="0 0 416 448" id="github">
+  <path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19-18.125
+        8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19 18.125-8.5
+        18.125 8.5 10.75 19 3.125 20.5zM320 304q0 10-3.125 20.5t-10.75
+        19-18.125 8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19
+        18.125-8.5 18.125 8.5 10.75 19 3.125 20.5zM360
+        304q0-30-17.25-51t-46.75-21q-10.25 0-48.75 5.25-17.75 2.75-39.25
+        2.75t-39.25-2.75q-38-5.25-48.75-5.25-29.5 0-46.75 21t-17.25 51q0 22 8
+        38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0
+        37.25-1.75t35-7.375 30.5-15 20.25-25.75 8-38.375zM416 260q0 51.75-15.25
+        82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5-41.75
+        1.125q-19.5 0-35.5-0.75t-36.875-3.125-38.125-7.5-34.25-12.875-30.25-20.25-21.5-28.75q-15.5-30.75-15.5-82.75
+        0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25
+        30.875q36.75-8.75 77.25-8.75 37 0 70 8 26.25-20.5
+        46.75-30.25t47.25-9.75q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34
+        99.5z" />
+</svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+    
+      <a href="#plugin-support" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../../.." title="VersionPress Documentation" class="md-header-nav__button md-logo">
+          
+            <img src="https://user-images.githubusercontent.com/101152/41179166-07f4a0b2-6b6a-11e8-98f1-c21d285dbb48.png" width="24" height="24">
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            
+              <span class="md-header-nav__topic">
+                VersionPress Documentation
+              </span>
+              <span class="md-header-nav__topic">
+                Plugin Support
+              </span>
+            
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          
+            <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+            
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+
+  <a href="https://github.com/versionpress/versionpress/" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      versionpress/versionpress
+    </div>
+  </a>
+
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="drawer">
+    <span class="md-nav__button md-logo">
+      
+        <img src="https://user-images.githubusercontent.com/101152/41179166-07f4a0b2-6b6a-11e8-98f1-c21d285dbb48.png" width="48" height="48">
+      
+    </span>
+    VersionPress Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+
+  <a href="https://github.com/versionpress/versionpress/" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      versionpress/versionpress
+    </div>
+  </a>
+
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../.." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      Getting Started
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Getting Started
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../getting-started/" title="Getting Started Home" class="md-nav__link">
+      Getting Started Home
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../getting-started/concepts/" title="Basic Concepts" class="md-nav__link">
+      Basic Concepts
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../getting-started/installation-uninstallation/" title="Installation and Uninstallation" class="md-nav__link">
+      Installation and Uninstallation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../getting-started/configuration/" title="Configuration" class="md-nav__link">
+      Configuration
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../getting-started/using-versionpress/" title="Using VersionPress" class="md-nav__link">
+      Using VersionPress
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../getting-started/about-eap/" title="Developer Preview" class="md-nav__link">
+      Developer Preview
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      Feature Focus
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        Feature Focus
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../feature-focus/" title="Feature Focus Home" class="md-nav__link">
+      Feature Focus Home
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../feature-focus/how-versionpress-works/" title="How VersionPress Works" class="md-nav__link">
+      How VersionPress Works
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../feature-focus/change-tracking/" title="Change Tracking" class="md-nav__link">
+      Change Tracking
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../feature-focus/undo-and-rollback/" title="Undo and Rollback" class="md-nav__link">
+      Undo and Rollback
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../feature-focus/searching-history/" title="Searching History" class="md-nav__link">
+      Searching History
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../feature-focus/external-plugins/" title="External Plugins and Themes" class="md-nav__link">
+      External Plugins and Themes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../feature-focus/custom-project-structure/" title="Custom Project Structure" class="md-nav__link">
+      Custom Project Structure
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../feature-focus/wp-cli/" title="WP-CLI Commands" class="md-nav__link">
+      WP-CLI Commands
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../feature-focus/git/" title="Versioning Engine - Git" class="md-nav__link">
+      Versioning Engine - Git
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../feature-focus/performance/" title="Performance Considerations" class="md-nav__link">
+      Performance Considerations
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      Sync / Team Workflows
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        Sync / Team Workflows
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../sync/" title="Sync / Team Workflows Home" class="md-nav__link">
+      Sync / Team Workflows Home
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../sync/concepts/" title="Concepts" class="md-nav__link">
+      Concepts
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../sync/cloning/" title="Cloning a Site" class="md-nav__link">
+      Cloning a Site
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../sync/merging/" title="Merging Sites" class="md-nav__link">
+      Merging Sites
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      3rd Party Integrations
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        3rd Party Integrations
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../integrations/" title="3rd Party Integrations Home" class="md-nav__link">
+      3rd Party Integrations Home
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../integrations/plugins/" title="Plugins" class="md-nav__link">
+      Plugins
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../integrations/themes/" title="Themes" class="md-nav__link">
+      Themes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../integrations/hosts/" title="Hosts" class="md-nav__link">
+      Hosts
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      Troubleshooting
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        Troubleshooting
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../troubleshooting/" title="Troubleshooting Home" class="md-nav__link">
+      Troubleshooting Home
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../troubleshooting/system-info-page/" title="System Info Page" class="md-nav__link">
+      System Info Page
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../troubleshooting/ui-not-loading/" title="UI Not Loading" class="md-nav__link">
+      UI Not Loading
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../troubleshooting/iis/" title="IIS" class="md-nav__link">
+      IIS
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7" checked>
+    
+    <label class="md-nav__link" for="nav-7">
+      Developer
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        Developer
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../dev-setup/" title="Dev Setup" class="md-nav__link">
+      Dev Setup
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        Plugin Support
+      </label>
+    
+    <a href="./" title="Plugin Support" class="md-nav__link md-nav__link--active">
+      Plugin Support
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" title="Introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#actions" title="Actions" class="md-nav__link">
+    Actions
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#actionsyml" title="actions.yml" class="md-nav__link">
+    actions.yml
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#action-detection" title="Action detection" class="md-nav__link">
+    Action detection
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#files-to-commit-with-an-action" title="Files to commit with an action" class="md-nav__link">
+    Files to commit with an action
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#database-schema" title="Database schema" class="md-nav__link">
+    Database schema
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defining-entities" title="Defining entities" class="md-nav__link">
+    Defining entities
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#identifying-entities" title="Identifying entities" class="md-nav__link">
+    Identifying entities
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#references" title="References" class="md-nav__link">
+    References
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#basic-references" title="Basic references" class="md-nav__link">
+    Basic references
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#value-references" title="Value references" class="md-nav__link">
+    Value references
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mn-references" title="M:N references" class="md-nav__link">
+    M:N references
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parent-references" title="Parent references" class="md-nav__link">
+    Parent references
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#frequently-written-entities" title="Frequently written entities" class="md-nav__link">
+    Frequently written entities
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ignoring-entities" title="Ignoring entities" class="md-nav__link">
+    Ignoring entities
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ignoring-columns" title="Ignoring columns" class="md-nav__link">
+    Ignoring columns
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cache-invalidation" title="Cache invalidation" class="md-nav__link">
+    Cache invalidation
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#shortcodes" title="Shortcodes" class="md-nav__link">
+    Shortcodes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hooks" title="Hooks" class="md-nav__link">
+    Hooks
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ignored-folders" title="Ignored folders" class="md-nav__link">
+    Ignored folders
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#discovery-mechanism" title="Discovery mechanism" class="md-nav__link">
+    Discovery mechanism
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resources" title="Resources" class="md-nav__link">
+    Resources
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#api-reference" title="API reference" class="md-nav__link">
+    API reference
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#filters" title="Filters" class="md-nav__link">
+    Filters
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#actions-api" title="Actions (API)" class="md-nav__link">
+    Actions (API)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#functions" title="Functions" class="md-nav__link">
+    Functions
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../development-process/" title="Development Process" class="md-nav__link">
+      Development Process
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
+    
+    <label class="md-nav__link" for="nav-8">
+      Release Notes
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-8">
+        Release Notes
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release-notes/" title="Release Notes Home" class="md-nav__link">
+      Release Notes Home
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release-notes/roadmap/" title="Roadmap" class="md-nav__link">
+      Roadmap
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release-notes/4.0-beta/" title="4.0-beta Release Notes" class="md-nav__link">
+      4.0-beta Release Notes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release-notes/4.0-alpha1/" title="4.0-alpha1 Release Notes" class="md-nav__link">
+      4.0-alpha1 Release Notes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release-notes/3.0.2/" title="3.0.2 Release Notes" class="md-nav__link">
+      3.0.2 Release Notes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release-notes/3.0.1/" title="3.0.1 Release Notes" class="md-nav__link">
+      3.0.1 Release Notes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release-notes/3.0/" title="3.0 Release Notes" class="md-nav__link">
+      3.0 Release Notes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release-notes/2.2/" title="2.2 Release Notes" class="md-nav__link">
+      2.2 Release Notes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release-notes/2.1.1/" title="2.1.1 Release Notes" class="md-nav__link">
+      2.1.1 Release Notes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release-notes/2.1/" title="2.1 Release Notes" class="md-nav__link">
+      2.1 Release Notes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release-notes/2.0.1/" title="2.0.1 Release Notes" class="md-nav__link">
+      2.0.1 Release Notes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release-notes/2.0/" title="2.0 Release Notes" class="md-nav__link">
+      2.0 Release Notes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release-notes/1.0.1/" title="1.0.1 Release Notes" class="md-nav__link">
+      1.0.1 Release Notes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release-notes/1.0/" title="1.0 Release Notes" class="md-nav__link">
+      1.0 Release Notes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release-notes/1.0-rc3/" title="1.0-rc3 Release Notes" class="md-nav__link">
+      1.0-rc3 Release Notes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release-notes/1.0-rc2/" title="1.0-rc2 Release Notes" class="md-nav__link">
+      1.0-rc2 Release Notes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release-notes/1.0-rc1/" title="1.0-rc1 Release Notes" class="md-nav__link">
+      1.0-rc1 Release Notes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release-notes/1.0-beta2/" title="1.0-beta2 Release Notes" class="md-nav__link">
+      1.0-beta2 Release Notes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release-notes/1.0-beta1/" title="1.0-beta1 Release Notes" class="md-nav__link">
+      1.0-beta1 Release Notes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release-notes/1.0-alpha3/" title="1.0-alpha3 Release Notes" class="md-nav__link">
+      1.0-alpha3 Release Notes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release-notes/1.0-alpha2/" title="1.0-alpha2 Release Notes" class="md-nav__link">
+      1.0-alpha2 Release Notes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../release-notes/1.0-alpha1/" title="1.0-alpha1 Release Notes" class="md-nav__link">
+      1.0-alpha1 Release Notes
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" title="Introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#actions" title="Actions" class="md-nav__link">
+    Actions
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#actionsyml" title="actions.yml" class="md-nav__link">
+    actions.yml
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#action-detection" title="Action detection" class="md-nav__link">
+    Action detection
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#files-to-commit-with-an-action" title="Files to commit with an action" class="md-nav__link">
+    Files to commit with an action
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#database-schema" title="Database schema" class="md-nav__link">
+    Database schema
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defining-entities" title="Defining entities" class="md-nav__link">
+    Defining entities
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#identifying-entities" title="Identifying entities" class="md-nav__link">
+    Identifying entities
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#references" title="References" class="md-nav__link">
+    References
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#basic-references" title="Basic references" class="md-nav__link">
+    Basic references
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#value-references" title="Value references" class="md-nav__link">
+    Value references
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mn-references" title="M:N references" class="md-nav__link">
+    M:N references
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parent-references" title="Parent references" class="md-nav__link">
+    Parent references
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#frequently-written-entities" title="Frequently written entities" class="md-nav__link">
+    Frequently written entities
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ignoring-entities" title="Ignoring entities" class="md-nav__link">
+    Ignoring entities
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ignoring-columns" title="Ignoring columns" class="md-nav__link">
+    Ignoring columns
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cache-invalidation" title="Cache invalidation" class="md-nav__link">
+    Cache invalidation
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#shortcodes" title="Shortcodes" class="md-nav__link">
+    Shortcodes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hooks" title="Hooks" class="md-nav__link">
+    Hooks
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ignored-folders" title="Ignored folders" class="md-nav__link">
+    Ignored folders
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#discovery-mechanism" title="Discovery mechanism" class="md-nav__link">
+    Discovery mechanism
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resources" title="Resources" class="md-nav__link">
+    Resources
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#api-reference" title="API reference" class="md-nav__link">
+    API reference
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#filters" title="Filters" class="md-nav__link">
+    Filters
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#actions-api" title="Actions (API)" class="md-nav__link">
+    Actions (API)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#functions" title="Functions" class="md-nav__link">
+    Functions
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/versionpress/versionpress/edit/master/docs/content/en/developer/plugin-support.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                <h1 id="plugin-support">Plugin Support<a class="headerlink" href="#plugin-support" title="Permanent link">&para;</a></h1>
+<div class="admonition info">
+<p class="admonition-title">Plugin Support</p>
+<p><img alt="🚧" class="emojione" src="https://cdn.jsdelivr.net/emojione/assets/svg/1f6a7.svg" title=":construction:" /> Plugin support is the main theme of <a href="https://github.com/versionpress/versionpress/milestone/16">VersionPress 4.0</a> which is currently in <a href="https://github.com/versionpress/versionpress/releases/tag/4.0-beta">beta</a>. Plugin developers, we'd like your feedback on this, feel free to <a href="https://github.com/versionpress/versionpress/issues/new">open new issues</a> or chat with us <a href="https://gitter.im/versionpress/versionpress">on Gitter</a>.</p>
+</div>
+<p>VersionPress needs to understand plugin data, actions, shortcodes and other things to automatically provide version control for them. This document describes how plugins (and themes, later) can hook into VersionPress functionality.</p>
+<h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h2>
+<p>Plugins are described to VersionPress by a set of files stored in the <code>.versionpress</code> folder in the plugin root (with other discovery options available, see below). They include:</p>
+<ul>
+<li><code>actions.yml</code> – plugin actions, i.e., what the plugin does</li>
+<li><code>schema.yml</code> – database schema (how the plugin stores data)</li>
+<li><code>shortcodes.yml</code> – shortcodes</li>
+<li><code>hooks.php</code> – other hooks</li>
+</ul>
+<p>All files are optional so for example, if a plugin doesn't define any new shortcodes it can omit the <code>shortcodes.yml</code> file. Simple plugins like <em>Hello Dolly</em> might even omit everything.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>WordPress core is described using the very same format and you can find the definition files in the <a href="../../../../../plugins/versionpress/.versionpress"><code>.versionpress</code></a> folder inside the plugin.</p>
+</div>
+<h2 id="actions">Actions<a class="headerlink" href="#actions" title="Permanent link">&para;</a></h2>
+<p>Actions represent what the plugin does. For example, WordPress core has actions like "update option", "publish post" and many others. They are the smallest changes in a WordPress site and are eventually stored as Git commits by VersionPress.</p>
+<p>An action is identified by a string like <code>option/edit</code> or <code>post/publish</code>, commits some file(s) with it and has a human-readable message like "Updated option blogname", "Published post Hello World", etc.</p>
+<p>Some commits may even contain multiple actions. For example, if a user switches to a new theme that also creates some options of its own, a single commit with <code>theme/switch</code> and several <code>option/create</code> actions will be created. When this operation is undone, it takes back both the theme switching and options creation.</p>
+<p>Actions are described in the <code>actions.yml</code> file.</p>
+<h3 id="actionsyml"><code>actions.yml</code><a class="headerlink" href="#actionsyml" title="Permanent link">&para;</a></h3>
+<p>Here's an example from the <a href="../../../../../plugins/versionpress/.versionpress/actions.yml">WordPress core <code>actions.yml</code> file</a>:</p>
+<div class="codehilite"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">post</span><span class="p p-Indicator">:</span>
+  <span class="l l-Scalar l-Scalar-Plain">tags</span><span class="p p-Indicator">:</span>
+    <span class="l l-Scalar l-Scalar-Plain">VP-Post-Title</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">post_title</span>
+    <span class="l l-Scalar l-Scalar-Plain">VP-Post-Type</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">post_type</span>
+  <span class="l l-Scalar l-Scalar-Plain">actions</span><span class="p p-Indicator">:</span>
+    <span class="l l-Scalar l-Scalar-Plain">create</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">Created %VP-Post-Type% &#39;%VP-Post-Title%&#39;</span>
+    <span class="l l-Scalar l-Scalar-Plain">edit</span><span class="p p-Indicator">:</span>
+      <span class="l l-Scalar l-Scalar-Plain">message</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">Edited %VP-Post-Type% &#39;%VP-Post-Title%&#39;</span>
+      <span class="l l-Scalar l-Scalar-Plain">priority</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">12</span>
+
+<span class="l l-Scalar l-Scalar-Plain">postmeta</span><span class="p p-Indicator">:</span>
+  <span class="l l-Scalar l-Scalar-Plain">tags</span><span class="p p-Indicator">:</span>
+    <span class="l l-Scalar l-Scalar-Plain">VP-Post-Id</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">vp_post_id</span>
+    <span class="l l-Scalar l-Scalar-Plain">VP-Post-Title</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">/</span>
+  <span class="l l-Scalar l-Scalar-Plain">parent-id-tag</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">VP-Post-Id</span>
+  <span class="l l-Scalar l-Scalar-Plain">actions</span><span class="p p-Indicator">:</span>
+    <span class="l l-Scalar l-Scalar-Plain">...</span>
+
+<span class="l l-Scalar l-Scalar-Plain">theme</span><span class="p p-Indicator">:</span>
+  <span class="l l-Scalar l-Scalar-Plain">tags</span><span class="p p-Indicator">:</span>
+    <span class="l l-Scalar l-Scalar-Plain">VP-Theme-Name</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">/</span>
+  <span class="l l-Scalar l-Scalar-Plain">actions</span><span class="p p-Indicator">:</span>
+    <span class="l l-Scalar l-Scalar-Plain">install</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">Installed theme &#39;%VP-Theme-Name%&#39;</span>
+    <span class="l l-Scalar l-Scalar-Plain">update</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">Updated theme &#39;%VP-Theme-Name%&#39;</span>
+</pre></div>
+
+<p>These are the main elements:</p>
+<ul>
+<li>The top-level elements are <strong>scopes</strong> that basically group related actions together. For example, actions related to posts are in the <code>post</code> scope, theme actions are in the <code>theme</code> scope, etc. Scopes use a singular form.</li>
+<li><strong>Tags</strong> are values saved in commit messages and are typically used to make user-facing messages more useful. For example, it's better to display <em>Created post 'Hello World'</em> than <em>Created post 123</em> and tags make this possible.<ul>
+<li>Tags are either mapped to database fields as in the <code>post</code> example, or use the <code>/</code> character to indicate that the value is provided by a filter (see below).</li>
+</ul>
+</li>
+<li><strong>The <code>actions</code> section</strong> defines all actions of a scope.<ul>
+<li>An action has a <strong>message</strong> that can reference tags to make it more user-friendly. Messages use past tense.</li>
+<li>Each action has a <strong>priority</strong> – 10 by default. Priorities behave like on WordPress filters and actions: the lower the number, the higher the priority. A more important action beats the less important one if both appear in the same commit. For example, <code>theme/switch</code> beats <code>option/edit</code> which means that the user will see a message about changing themes, not updating some internal option.</li>
+<li>Priorities can be set dynamically using the <code>vp_action_priority_{$scope}</code> filter, see <a href="https://github.com/versionpress/versionpress/blob/7a500248a363472127c93a2ffffaec11f486e6e5/plugins/versionpress/.versionpress/hooks.php#L160-L166">WPLANG handling</a> as an example.</li>
+<li>A combination of a scope and an action, e.g., <code>post/create</code> or <code>theme/install</code>, uniquely identifies the action and can be <a href="https://docs.versionpress.net/en/feature-focus/searching-history">searched for in the UI</a>.</li>
+</ul>
+</li>
+<li>An action has a <strong>message</strong>, usually in past tense, and a <strong>priority</strong>. If priority is not set, the default value of 10 is used.<ul>
+<li>Priorities behave like on WordPress filters and actions: the lower the number, the higher the priority. A more important action beats the less important one if both appear in the same commit. For example, <code>theme/switch</code> beats <code>option/edit</code> which means that the user will see a message about changing themes, not updating some internal option.</li>
+</ul>
+</li>
+<li><strong>Meta entities</strong> also contain <strong><code>parent-id-tag</code></strong> with the name of a tag containing ID of the parent entity.</li>
+</ul>
+<h3 id="action-detection">Action detection<a class="headerlink" href="#action-detection" title="Permanent link">&para;</a></h3>
+<p>There are generally two types of actions:</p>
+<ul>
+<li><strong>Database actions</strong> like manipulating posts, options, users, etc.</li>
+<li><strong>Non-database actions</strong> like updating WordPress, deleting themes, etc.</li>
+</ul>
+<p><strong>Database actions</strong> are more common (at least in WordPress core) and get a pretty convenient treatment by default. Based on the SQL query issued, a <code>create</code>, <code>edit</code> or <code>delete</code> action is created automatically.</p>
+<p>If you need more specific actions like <code>post/trash</code> or <code>comment/approve</code>, filters are used: <a href="https://github.com/versionpress/versionpress/blob/0a29069de769841ed545556cecf4d2323a92741b/plugins/versionpress/src/Storages/DirectoryStorage.php#L225-L225"><code>vp_entity_action_{$entityName}</code></a> for standard entities and <a href="https://github.com/versionpress/versionpress/blob/49fdc0ba737b40560c40129d791e0cf63b1031e0/plugins/versionpress/src/Storages/MetaEntityStorage.php#L166-L16"><code>vp_meta_entity_action_{$entityName}</code></a> for meta entities.</p>
+<blockquote>
+<p>🚧 Hooks are not properly documented yet, please click through the hook names to at least browse the source codes on GitHub.</p>
+</blockquote>
+<p>Tags are automatically extracted from the database entity. For example,</p>
+<div class="codehilite"><pre><span></span>  <span class="l l-Scalar l-Scalar-Plain">tags</span><span class="p p-Indicator">:</span>
+    <span class="l l-Scalar l-Scalar-Plain">VP-Post-Title</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">post_title</span>
+</pre></div>
+
+<p>makes sure that the message (defined as <code>Created post '%VP-Post-Title%'</code>) automatically stores the real post title.</p>
+<p>Tags can be altered (or created entirely if the YAML only uses <code>/</code> as a tag value) by filters <a href="https://github.com/versionpress/versionpress/blob/0a29069de769841ed545556cecf4d2323a92741b/plugins/versionpress/src/Storages/DirectoryStorage.php#L226-L226"><code>vp_entity_tags_{$entityName}</code></a> and <a href="https://github.com/versionpress/versionpress/blob/49fdc0ba737b40560c40129d791e0cf63b1031e0/plugins/versionpress/src/Storages/MetaEntityStorage.php#L167-L16"><code>vp_meta_entity_tags_{$entityName}</code></a>.</p>
+<p><strong>Non-database actions</strong> are tracked manually by calling a global <a href="https://github.com/versionpress/versionpress/blob/3b0b242b11804d39c838b15a21ffbd7a27b404b4/plugins/versionpress/public-functions.php#L18-L18"><code>vp_force_action()</code></a> function. This overwrites all other actions VersionPress might have collected during the request. For example, this is how <code>wordpress/update</code> action is tracked:</p>
+<div class="codehilite"><pre><span></span><span class="x">vp_force_action(&#39;wordpress&#39;, &#39;update&#39;, $version, [], $wpFiles);</span>
+</pre></div>
+
+<blockquote>
+<p><img alt="🚧" class="emojione" src="https://cdn.jsdelivr.net/emojione/assets/svg/1f6a7.svg" title=":construction:" /> We're planning to change this for the final VersionPress 4.0 release. Some filter will probably be used instead.</p>
+</blockquote>
+<h3 id="files-to-commit-with-an-action">Files to commit with an action<a class="headerlink" href="#files-to-commit-with-an-action" title="Permanent link">&para;</a></h3>
+<p>Every action has a message and some content. It's this content that is undone when the user clicks the Undo button in the UI.</p>
+<p>For <strong>database actions</strong>, VersionPress automatically commits the corresponding INI file. For example, for a <code>post/edit</code> action, a post's INI file is committed.</p>
+<blockquote>
+<p>Side note: VersionPress stores database entities in the <code>wp-content/vpdb</code> folder as a set of INI files.</p>
+</blockquote>
+<p>This behavior is sufficient most of the time, however, some changes should commit more files. For example, when the post is an attachment, the uploaded file should also be committed. For this, the list of files to commit can be filtered using the <code>vp_entity_files_{$entityName}</code> or <code>vp_meta_entity_files_{$entityName}</code> filters.</p>
+<p>The array of files to commit can contain three different types of items:</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Concepts like VPIDs are explained in the "<a href="#database-schema">Database schema</a>" section below.</p>
+</div>
+<ol>
+<li>
+<p>Single file corresponding to an entity, for example:</p>
+<div class="codehilite"><pre><span></span><span class="x">[</span>
+<span class="x">  &#39;type&#39; =&gt; &#39;storage-file&#39;,</span>
+<span class="x">  &#39;entity&#39; =&gt; &#39;post&#39;,</span>
+<span class="x">  &#39;id&#39; =&gt; $vpid,</span>
+<span class="x">  &#39;parent-id&#39; =&gt; $parentVpid  // for meta entities</span>
+<span class="x">]</span>
+</pre></div>
+
+<p>VersionPress automatically calculates the right path to the file.</p>
+</li>
+<li>
+<p>All files of an entity type:</p>
+<div class="codehilite"><pre><span></span><span class="x">[</span>
+<span class="x">  &#39;type&#39; =&gt; &#39;all-storage-files&#39;,</span>
+<span class="x">  &#39;entity&#39; =&gt; &#39;option&#39;</span>
+<span class="x">]</span>
+</pre></div>
+
+</li>
+<li>
+<p>Path on the filesystem:</p>
+<div class="codehilite"><pre><span></span><span class="x">[</span>
+<span class="x">  &#39;type&#39; =&gt; &#39;path&#39;,</span>
+<span class="x">  &#39;path&#39; =&gt; &#39;some/path/supports/wildcards/*&#39;</span>
+<span class="x">]</span>
+</pre></div>
+
+</li>
+</ol>
+<p>The full example might look something like this:</p>
+<div class="codehilite"><pre><span></span><span class="x">[</span>
+<span class="x">  [&#39;type&#39; =&gt; &#39;storage-file&#39;, &#39;entity&#39; =&gt; &#39;post&#39;, &#39;id&#39; =&gt; $vpid, &#39;parent-id&#39; =&gt; null],</span>
+<span class="x">  [&#39;type&#39; =&gt; &#39;storage-file&#39;, &#39;entity&#39; =&gt; &#39;usermeta&#39;, &#39;id&#39; =&gt; $vpid, &#39;parent-id&#39; =&gt; $userVpid],</span>
+<span class="x">  [&#39;type&#39; =&gt; &#39;all-storage-files&#39;, &#39;entity&#39; =&gt; &#39;option&#39;],</span>
+<span class="x">  [&#39;type&#39; =&gt; &#39;path&#39;, &#39;path&#39; =&gt; &#39;/var/www/wp/example.txt&#39;],</span>
+<span class="x">  [&#39;type&#39; =&gt; &#39;path&#39;, &#39;path&#39; =&gt; &#39;/var/www/wp/folder/*&#39;]</span>
+<span class="x">]</span>
+</pre></div>
+
+<p>For <strong>non-database actions</strong>, this list is one of the arguments of the <a href="https://github.com/versionpress/versionpress/blob/3b0b242b11804d39c838b15a21ffbd7a27b404b4/plugins/versionpress/public-functions.php#L18-L18"><code>vp_force_action()</code></a> function.</p>
+<blockquote>
+<p>As noted above, we'll be getting rid of this approach so this is temporary info.</p>
+</blockquote>
+<h2 id="database-schema">Database schema<a class="headerlink" href="#database-schema" title="Permanent link">&para;</a></h2>
+<p>If the plugin adds custom data into the database it must provide a <code>schema.yml</code> file describing the database model. For example, this is how WordPress posts are described:</p>
+<div class="codehilite"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">post</span><span class="p p-Indicator">:</span>
+  <span class="l l-Scalar l-Scalar-Plain">table</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">posts</span>
+  <span class="l l-Scalar l-Scalar-Plain">id</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">ID</span>
+  <span class="l l-Scalar l-Scalar-Plain">references</span><span class="p p-Indicator">:</span>
+    <span class="l l-Scalar l-Scalar-Plain">post_author</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">user</span>
+    <span class="l l-Scalar l-Scalar-Plain">post_parent</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">post</span>
+  <span class="l l-Scalar l-Scalar-Plain">mn-references</span><span class="p p-Indicator">:</span>
+    <span class="l l-Scalar l-Scalar-Plain">term_relationships.term_taxonomy_id</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">term_taxonomy</span>
+  <span class="l l-Scalar l-Scalar-Plain">ignored-entities</span><span class="p p-Indicator">:</span>
+    <span class="p p-Indicator">-</span> <span class="s">&#39;post_type:</span><span class="nv"> </span><span class="s">revision&#39;</span>
+    <span class="p p-Indicator">-</span> <span class="s">&#39;post_status:</span><span class="nv"> </span><span class="s">auto-draft&#39;</span>
+  <span class="l l-Scalar l-Scalar-Plain">ignored-columns</span><span class="p p-Indicator">:</span>
+    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">comment_count</span><span class="p p-Indicator">:</span> <span class="s">&#39;@vp_fix_comments_count&#39;</span>
+  <span class="l l-Scalar l-Scalar-Plain">clean-cache</span><span class="p p-Indicator">:</span>
+    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">post</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">id</span>
+</pre></div>
+
+<h3 id="defining-entities">Defining entities<a class="headerlink" href="#defining-entities" title="Permanent link">&para;</a></h3>
+<p>The top-level keys define entities such as <code>post</code>, <code>comment</code>, <code>option</code> or <code>postmeta</code>. Entity names use a singular form.</p>
+<p>By default, entity names match database table names without the <code>wp_</code> (or custom) prefix. It is possible to specify a different table using the <code>table</code> property:</p>
+<div class="codehilite"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">post</span><span class="p p-Indicator">:</span>
+  <span class="l l-Scalar l-Scalar-Plain">table</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">posts</span>
+  <span class="l l-Scalar l-Scalar-Plain">...</span>
+</pre></div>
+
+<p>Again, this is prefix-less; <code>wp_</code> or another prefix will be added automatically.</p>
+<h3 id="identifying-entities">Identifying entities<a class="headerlink" href="#identifying-entities" title="Permanent link">&para;</a></h3>
+<p>VersionPress needs to know how to identify entities. There are two approaches and they are represented by either using a <code>id</code> or <code>vpid</code> property in the schema:</p>
+<ul>
+<li>
+<p><strong><code>id</code></strong> points to a standard WordPress auto-increment primary key. <strong>VersionPress will generate VPIDs</strong> (globally unique IDs) for such entities. Most entities are of this type – posts, comments, users etc.</p>
+</li>
+<li>
+<p><strong><code>vpid</code></strong> points VersionPress directly to use the given column as a unique identifier and skip the whole VPID generation and maintenance process. Entities of this type <strong>will not have artificial VPIDs</strong>. The <code>options</code> table is an example of this – even though it has an <code>option_id</code> auto-increment primary key, from VersionPress' point of view the unique identifier is <code>option_name</code>.</p>
+</li>
+</ul>
+<p>Examples:</p>
+<div class="codehilite"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">post</span><span class="p p-Indicator">:</span>
+  <span class="l l-Scalar l-Scalar-Plain">table</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">posts</span>
+  <span class="l l-Scalar l-Scalar-Plain">id</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">ID</span>
+
+<span class="l l-Scalar l-Scalar-Plain">option</span><span class="p p-Indicator">:</span>
+  <span class="l l-Scalar l-Scalar-Plain">table</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">options</span>
+  <span class="l l-Scalar l-Scalar-Plain">vpid</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">option_name</span>
+</pre></div>
+
+<h3 id="references">References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h3>
+<p>VersionPress needs to understand relationships between entities so that it can update their IDs between environments. There are several types of references, each using a slightly different notation in the schema file.</p>
+<h4 id="basic-references">Basic references<a class="headerlink" href="#basic-references" title="Permanent link">&para;</a></h4>
+<p>The most basic references are "foreign keys". For example:</p>
+<div class="codehilite"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">post</span><span class="p p-Indicator">:</span>
+  <span class="l l-Scalar l-Scalar-Plain">references</span><span class="p p-Indicator">:</span>
+    <span class="l l-Scalar l-Scalar-Plain">post_author</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">user</span>
+    <span class="l l-Scalar l-Scalar-Plain">post_parent</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">post</span>
+</pre></div>
+
+<p>This says that the <code>post_author</code> field points to a user while the <code>post_parent</code> references another post.</p>
+<h4 id="value-references">Value references<a class="headerlink" href="#value-references" title="Permanent link">&para;</a></h4>
+<p>Value references are used when a reference to an entity depends on another column value. For example, options might point to posts, terms or users and it will depend on which option it is. This is how it's encoded:</p>
+<div class="codehilite"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">option</span><span class="p p-Indicator">:</span>
+  <span class="l l-Scalar l-Scalar-Plain">value-references</span><span class="p p-Indicator">:</span>
+    <span class="l l-Scalar l-Scalar-Plain">option_name@option_value</span><span class="p p-Indicator">:</span>
+      <span class="l l-Scalar l-Scalar-Plain">page_on_front</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">post</span>
+      <span class="l l-Scalar l-Scalar-Plain">default_category</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">term</span>
+      <span class="l l-Scalar l-Scalar-Plain">...</span>
+</pre></div>
+
+<p>This is the simplest case but it can also get more fancy:</p>
+<p>If the entity type needs to be <strong>determined dynamically</strong> it can reference a PHP function:</p>
+<div class="codehilite"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">postmeta</span><span class="p p-Indicator">:</span>
+  <span class="l l-Scalar l-Scalar-Plain">value-references</span><span class="p p-Indicator">:</span>
+    <span class="l l-Scalar l-Scalar-Plain">meta_key@meta_value</span><span class="p p-Indicator">:</span>
+      <span class="l l-Scalar l-Scalar-Plain">_menu_item_object_id</span><span class="p p-Indicator">:</span> <span class="s">&#39;@\VersionPress\Database\VpidRepository::getMenuReference&#39;</span>
+</pre></div>
+
+<p>Note that there are no parenthesis at the end of this (it's a method reference, not a call) and that it is prefixed with <code>@</code>. The function gets the entity as a parameter and returns a target entity name. For example, for <code>_menu_item_object_id</code>, the function looks for a related DB row with <code>_menu_item_type</code> and returns its value.</p>
+<p>If the <strong>ID is in a serialized object</strong>, you can specify the path by a suffix of the source column. It looks like an array access but also supports regular expressions, for example:</p>
+<div class="codehilite"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">option</span><span class="p p-Indicator">:</span>
+  <span class="l l-Scalar l-Scalar-Plain">value-references</span><span class="p p-Indicator">:</span>
+    <span class="l l-Scalar l-Scalar-Plain">option_name@option_value</span><span class="p p-Indicator">:</span>
+      <span class="l l-Scalar l-Scalar-Plain">widget_pages[/\d+/][&quot;exclude&quot;]</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">post</span>
+</pre></div>
+
+<p>To visualize this, the <code>widget_pages</code> option contains a value like <code>a:2:{i:2;a:3:{s:5:&quot;title&quot;;s:0:&quot;&quot;;s:7:&quot;exclude&quot;;s:7:&quot;1, 2, 3&quot;;...}...}</code> which, unserialized, looks like this:</p>
+<div class="codehilite"><pre><span></span><span class="x">[</span>
+<span class="x">  2 =&gt; [</span>
+<span class="x">    &quot;title&quot; =&gt; &quot;&quot;,</span>
+<span class="x">    &quot;sortby&quot; =&gt; &quot;post_title&quot;,</span>
+<span class="x">    &quot;exclude&quot; =&gt; &quot;1, 2, 3&quot;</span>
+<span class="x">  ],</span>
+<span class="x">  &quot;_multiwidget&quot; =&gt; 1</span>
+<span class="x">]</span>
+</pre></div>
+
+<p>The schema says that the numbers in the "exclude" key reference posts.</p>
+<p>Value references also support <strong>wildcards</strong> in the name of the source column. It's useful e.g. for options named <code>theme_mods_&lt;name of theme&gt;</code>. An example that mixes this with the serialized data syntax is:</p>
+<div class="codehilite"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">option</span><span class="p p-Indicator">:</span>
+  <span class="l l-Scalar l-Scalar-Plain">value-references</span><span class="p p-Indicator">:</span>
+    <span class="l l-Scalar l-Scalar-Plain">option_name@option_value</span><span class="p p-Indicator">:</span>
+      <span class="l l-Scalar l-Scalar-Plain">theme_mods_*[&quot;nav_menu_locations&quot;][/.*/]</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">term</span>
+      <span class="l l-Scalar l-Scalar-Plain">theme_mods_*[&quot;header_image_data&quot;][&quot;attachment_id&quot;]</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">post</span>
+      <span class="l l-Scalar l-Scalar-Plain">theme_mods_*[&quot;custom_logo&quot;]</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">post</span>
+</pre></div>
+
+<p>It probably won't surprise you that this is a real example used in WordPress' <code>schema.yml</code>. <img alt="😜" class="emojione" src="https://cdn.jsdelivr.net/emojione/assets/svg/1f61c.svg" title=":stuck_out_tongue_winking_eye:" /></p>
+<p>Another supported feature are IDs in serialized data in serialized data (really).</p>
+<p>An example from WooCommerce: <code>a:1:{s:4:&quot;cart&quot;;s:99:&quot;a:1:{s:32:&quot;a5bfc9e07964f8dddeb95fc584cd965d&quot;;a:2:{s:10:&quot;product_id&quot;;i:37;s:12:&quot;variation_id&quot;;i:0;}}&quot;;}</code>.</p>
+<div class="codehilite"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">session</span><span class="p p-Indicator">:</span>
+  <span class="l l-Scalar l-Scalar-Plain">value-references</span><span class="p p-Indicator">:</span>
+    <span class="l l-Scalar l-Scalar-Plain">session_key@session_value</span><span class="p p-Indicator">:</span>
+      <span class="s">&quot;*[\&quot;cart\&quot;]..[/.*/][\&quot;product_id\&quot;]&quot;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">product</span>
+      <span class="s">&quot;*[\&quot;cart\&quot;]..[/.*/][\&quot;variation_id\&quot;]&quot;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">variation</span>
+</pre></div>
+
+<p>The complete syntax is:</p>
+<div class="codehilite"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">value-references</span><span class="p p-Indicator">:</span>
+  <span class="l l-Scalar l-Scalar-Plain">&lt;source_column_name&gt;@&lt;value_column_name&gt;</span><span class="p p-Indicator">:</span>
+    <span class="l l-Scalar l-Scalar-Plain">&lt;source_column_value&gt;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">&lt;foreign_entity_name | @mapping_function&gt;</span>
+    <span class="l l-Scalar l-Scalar-Plain">&lt;source_column_value&gt;[&quot;path-in-serialized-objects&quot;][/\d+/][0]..[&quot;key-in-nested-serialized-array&quot;]</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">&lt;foreign_entity_name | @mapping_function&gt;</span>
+    <span class="l l-Scalar l-Scalar-Plain">&lt;columns_with_prefix_*&gt;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">&lt;foreign_entity_name | @mapping_function&gt;</span>
+</pre></div>
+
+<h4 id="mn-references">M:N references<a class="headerlink" href="#mn-references" title="Permanent link">&para;</a></h4>
+<p>Some entities are in an M:N relationship like posts and term_taxonomies. This is how it's written:</p>
+<div class="codehilite"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">post</span><span class="p p-Indicator">:</span>
+  <span class="l l-Scalar l-Scalar-Plain">mn-references</span><span class="p p-Indicator">:</span>
+    <span class="l l-Scalar l-Scalar-Plain">term_relationships.term_taxonomy_id</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">term_taxonomy</span>
+</pre></div>
+
+<p>One entity is considered the main one which is kind of arbitrary as technically, VersionPress treats them equally. Here, we decided that posts will store tags and categories in them, not the other way around.</p>
+<p>The syntax is:</p>
+<div class="codehilite"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">mn-references</span><span class="p p-Indicator">:</span>
+  <span class="l l-Scalar l-Scalar-Plain">&lt;junction_table_name_without_prefix&gt;.&lt;column_name&gt;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">&lt;foreign_entity_name&gt;</span>
+</pre></div>
+
+<p>References can also be prefixed with a tilde (<code>~</code>) which makes them <strong>"virtual"</strong>:</p>
+<div class="codehilite"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">mn-references</span><span class="p p-Indicator">:</span>
+  <span class="l l-Scalar l-Scalar-Plain">~&lt;junction_table_name_without_prefix&gt;.&lt;column_name&gt;</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">&lt;foreign_entity_name&gt;</span>
+</pre></div>
+
+<p>A virtual reference is not stored in the INI file but the relationships are still checked during reverts. For example, when a revert would delete a category (revert of <code>term_taxonomy/create</code>) and there is some post referencing it, the operation would fail. This is ensured by:</p>
+<div class="codehilite"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">term_taxonomy</span><span class="p p-Indicator">:</span>
+  <span class="l l-Scalar l-Scalar-Plain">mn-references</span><span class="p p-Indicator">:</span>
+    <span class="l l-Scalar l-Scalar-Plain">~term_relationships.object_id</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">post</span>
+</pre></div>
+
+<h4 id="parent-references">Parent references<a class="headerlink" href="#parent-references" title="Permanent link">&para;</a></h4>
+<p>Some entities are stored within other entities, for example, postmeta are stored in the same INI file as their parent post. This is captured using a <code>parent-reference</code> property:</p>
+<div class="codehilite"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">postmeta</span><span class="p p-Indicator">:</span>
+  <span class="l l-Scalar l-Scalar-Plain">parent-reference</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">post_id</span>
+  <span class="l l-Scalar l-Scalar-Plain">references</span><span class="p p-Indicator">:</span>
+    <span class="l l-Scalar l-Scalar-Plain">post_id</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">post</span>
+</pre></div>
+
+<p>This references one of the basic reference column names, not the final entity. The notation above reads "postmeta stores a parent reference in the <code>post_id</code> column, and that points to the <code>post</code> entity".</p>
+<h3 id="frequently-written-entities">Frequently written entities<a class="headerlink" href="#frequently-written-entities" title="Permanent link">&para;</a></h3>
+<p>Some entities are changed very often, e.g., view counters, Akismet spam count, etc. VersionPress only saves them once in a while and the <code>frequently-written</code> section influences this:</p>
+<div class="codehilite"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">entity</span><span class="p p-Indicator">:</span>
+  <span class="l l-Scalar l-Scalar-Plain">frequently-written</span><span class="p p-Indicator">:</span>
+    <span class="p p-Indicator">-</span> <span class="s">&#39;column_name:</span><span class="nv"> </span><span class="s">value&#39;</span>
+    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">query</span><span class="p p-Indicator">:</span> <span class="s">&#39;column1_name:</span><span class="nv"> </span><span class="s">value1</span><span class="nv"> </span><span class="s">column2_name:</span><span class="nv"> </span><span class="s">value2&#39;</span>
+      <span class="l l-Scalar l-Scalar-Plain">interval</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">5min</span>
+</pre></div>
+
+<p>The values in the <code>frequently-written</code> array can either be strings which are then interpreted as queries, or objects with <code>query</code> and <code>interval</code> keys.</p>
+<ul>
+<li><strong>Queries</strong> use the same syntax as search / filtering in the UI, with some small differences like that the date range operator cannot be used but overall, the syntax is pretty intuitive. <em>TODO add link</em></li>
+<li>The <strong>interval</strong> is parsed by the <code>strtotime()</code> function and the default value is one hour.</li>
+</ul>
+<h3 id="ignoring-entities">Ignoring entities<a class="headerlink" href="#ignoring-entities" title="Permanent link">&para;</a></h3>
+<p>Some entities should be ignored (not tracked at all) like transient options, environment-specific options, etc. This is an example from the <code>option</code> entity:</p>
+<div class="codehilite"><pre><span></span>  <span class="l l-Scalar l-Scalar-Plain">ignored-entities</span><span class="p p-Indicator">:</span>
+    <span class="p p-Indicator">-</span> <span class="s">&#39;option_name:</span><span class="nv"> </span><span class="s">_transient_*&#39;</span>
+    <span class="p p-Indicator">-</span> <span class="s">&#39;option_name:</span><span class="nv"> </span><span class="s">_site_transient_*&#39;</span>
+    <span class="p p-Indicator">-</span> <span class="s">&#39;option_name:</span><span class="nv"> </span><span class="s">siteurl&#39;</span>
+</pre></div>
+
+<p>Again, queries are used. Wildcards are supported.</p>
+<h4 id="ignoring-columns">Ignoring columns<a class="headerlink" href="#ignoring-columns" title="Permanent link">&para;</a></h4>
+<p>It is possible to ignore just parts of entities. The columns might either be ignored entirely or computed dynamically using a PHP function:</p>
+<div class="codehilite"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">entity</span><span class="p p-Indicator">:</span>
+  <span class="l l-Scalar l-Scalar-Plain">ignored-columns</span><span class="p p-Indicator">:</span>
+    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">column_name_1</span>
+    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">column_name_2</span>
+    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">computed_column_name</span><span class="p p-Indicator">:</span> <span class="s">&#39;@functionReference&#39;</span>
+</pre></div>
+
+<p>The function is called whenever VersionPress does its INI files =&gt; DB synchronization. The function will get an instance of <code>VersionPress\Database\Database</code> as an argument and is expected to update the database appropriately. The <code>Database</code> class has the same methods as <code>wpdb</code> but the changes it make are not tracked by VersionPress itself.</p>
+<h4 id="cache-invalidation">Cache invalidation<a class="headerlink" href="#cache-invalidation" title="Permanent link">&para;</a></h4>
+<p>WordPress uses cache for posts, comments, users, terms, etc. This cache needs to be invalidated when VersionPress updates database (on undo, rollback, pull, etc.). It is possible to tell VersionPress which cache to invalidate and where to find the related IDs.</p>
+<p>For example, when some post is deleted using the Undo functionality, it is necessary to call <code>clean_post_cache(&lt;post-id&gt;)</code>. VersionPress will do it automatically based on following piece of schema:</p>
+<div class="codehilite"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">post</span><span class="p p-Indicator">:</span>
+  <span class="l l-Scalar l-Scalar-Plain">table</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">posts</span>
+  <span class="l l-Scalar l-Scalar-Plain">id</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">ID</span>
+  <span class="l l-Scalar l-Scalar-Plain">clean-cache</span><span class="p p-Indicator">:</span>
+    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">post</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">id</span>
+</pre></div>
+
+<p>It tells VersionPress to delete the post cache (VP resolves the function name as <code>clean_&lt;cache-type&gt;_cache</code>). You can use <code>id</code> as the source of IDs for invalidation or a reference. For example like this:</p>
+<div class="codehilite"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">post</span><span class="p p-Indicator">:</span>
+  <span class="l l-Scalar l-Scalar-Plain">references</span><span class="p p-Indicator">:</span>
+      <span class="l l-Scalar l-Scalar-Plain">post_author</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">user</span>
+      <span class="l l-Scalar l-Scalar-Plain">post_parent</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">post</span>
+  <span class="l l-Scalar l-Scalar-Plain">clean-cache</span><span class="p p-Indicator">:</span>
+    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">post</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">id</span>
+    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">user</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">post_author</span>
+    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">post</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">post_parent</span>
+</pre></div>
+
+<h2 id="shortcodes">Shortcodes<a class="headerlink" href="#shortcodes" title="Permanent link">&para;</a></h2>
+<p>Similarly to database schema, VersionPress needs to understand shortcodes as they can also contain entity references. <code>shortcodes.yml</code> describes this, here is an example:</p>
+<div class="codehilite"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">shortcode-locations</span><span class="p p-Indicator">:</span>
+  <span class="l l-Scalar l-Scalar-Plain">post</span><span class="p p-Indicator">:</span>
+    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">post_content</span>
+
+<span class="l l-Scalar l-Scalar-Plain">shortcodes</span><span class="p p-Indicator">:</span>
+  <span class="l l-Scalar l-Scalar-Plain">gallery</span><span class="p p-Indicator">:</span>
+    <span class="l l-Scalar l-Scalar-Plain">id</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">post</span>
+    <span class="l l-Scalar l-Scalar-Plain">ids</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">post</span>
+    <span class="l l-Scalar l-Scalar-Plain">include</span><span class="p p-Indicator">:</span>
+    <span class="l l-Scalar l-Scalar-Plain">exclude</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">post</span>
+  <span class="l l-Scalar l-Scalar-Plain">playlist</span><span class="p p-Indicator">:</span>
+    <span class="l l-Scalar l-Scalar-Plain">id</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">post</span>
+    <span class="l l-Scalar l-Scalar-Plain">ids</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">post</span>
+    <span class="l l-Scalar l-Scalar-Plain">include</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">post</span>
+    <span class="l l-Scalar l-Scalar-Plain">exclude</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">post</span>
+</pre></div>
+
+<p>The <strong><code>shortcode-locations</code></strong> array tells VersionPress where the shortcodes can appear. By default, WordPress only allows shortcodes in post content but here's an example of how it could look if it also supported them in post titles and comments:</p>
+<div class="codehilite"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">shortcode-locations</span><span class="p p-Indicator">:</span>
+  <span class="l l-Scalar l-Scalar-Plain">post</span><span class="p p-Indicator">:</span>
+    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">post_content</span>
+    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">post_title</span>
+  <span class="l l-Scalar l-Scalar-Plain">comment</span><span class="p p-Indicator">:</span>
+    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">comment_content</span>
+</pre></div>
+
+<p>Note that WordPress doesn't restrict shortcode <em>type</em> for various locations, so if some shortcode is supported in e.g. <code>comment_content</code>, all shortcodes are.</p>
+<p>The <code>shortcodes</code> array holds the actual shortcodes, but only those that contain references to other entities so things like <code>[embed]</code> or <code>[audio]</code> are not present. Here's an example:</p>
+<div class="codehilite"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">shortcodes</span><span class="p p-Indicator">:</span>
+  <span class="l l-Scalar l-Scalar-Plain">gallery</span><span class="p p-Indicator">:</span>
+    <span class="l l-Scalar l-Scalar-Plain">id</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">post</span>
+    <span class="l l-Scalar l-Scalar-Plain">ids</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">post</span>
+    <span class="l l-Scalar l-Scalar-Plain">include</span><span class="p p-Indicator">:</span>
+    <span class="l l-Scalar l-Scalar-Plain">exclude</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">post</span>
+  <span class="l l-Scalar l-Scalar-Plain">playlist</span><span class="p p-Indicator">:</span>
+    <span class="l l-Scalar l-Scalar-Plain">id</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">post</span>
+    <span class="l l-Scalar l-Scalar-Plain">ids</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">post</span>
+    <span class="l l-Scalar l-Scalar-Plain">include</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">post</span>
+    <span class="l l-Scalar l-Scalar-Plain">exclude</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">post</span>
+</pre></div>
+
+<p>For example the <code>[gallery]</code> shortcode has four attributes that can contain references, and they all point to the <code>post</code> entity (it's an entity, not a table; the table will eventually be something like <code>wp_posts</code>).</p>
+<p>Note that you don't have to worry about the attribute type, whether it contains a single ID or a list of IDs. VersionPress handles both cases automatically:</p>
+<div class="codehilite"><pre><span></span><span class="x">[gallery id=&quot;1&quot;]</span>
+<span class="x">[gallery id=&quot;1,2,3,6,11,20&quot;]</span>
+</pre></div>
+
+<h2 id="hooks">Hooks<a class="headerlink" href="#hooks" title="Permanent link">&para;</a></h2>
+<p>If something cannot be described statically, VersionPress offers several filters, actions and functions to define behavior through code. Implement them in the <code>hooks.php</code> file.</p>
+<p>Most of the filters have already been discussed in the text above, you can find the full API reference below.</p>
+<h2 id="ignored-folders">Ignored folders<a class="headerlink" href="#ignored-folders" title="Permanent link">&para;</a></h2>
+<p>Feel free to use custom <code>.gitignore</code> for files in the plugin directory. You can also ignore files / directories outside the plugin directory. There will be a filter to let VersionPress know which files / directories you want to ignore.</p>
+<h2 id="discovery-mechanism">Discovery mechanism<a class="headerlink" href="#discovery-mechanism" title="Permanent link">&para;</a></h2>
+<p>VersionPress looks for plugin definitions in these locations, in this order:</p>
+<ol>
+<li><code>WP_CONTENT_DIR/.versionpress/plugins/&lt;plugin-slug&gt;</code> (user-editable definitions in the <code>wp-content</code> directory)</li>
+<li><code>WP_PLUGIN_DIR/&lt;plugin-slug&gt;/.versionpress</code> (definitions bundled with plugins)</li>
+</ol>
+<p>The first definition found is used.</p>
+<h2 id="resources">Resources<a class="headerlink" href="#resources" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Issue <a href="https://github.com/versionpress/versionpress/issues/1036">#1036</a> – everything was discussed there.</li>
+</ul>
+<h2 id="api-reference">API reference<a class="headerlink" href="#api-reference" title="Permanent link">&para;</a></h2>
+<p>TODO this will be auto-generated from code.</p>
+<h3 id="filters">Filters<a class="headerlink" href="#filters" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>vp_entity_action_{$entityName}</code><ul>
+<li><code>apply_filters(&quot;vp_entity_action_{$entityName}&quot;, $action, $oldEntity, $newEntity)</code></li>
+</ul>
+</li>
+<li><code>vp_meta_entity_action_{$entityName}</code><ul>
+<li><code>apply_filters(&quot;vp_meta_entity_action_{$entityName}&quot;, $action, $oldEntity, $newEntity, $oldParentEntity, $newParentEntity)</code></li>
+</ul>
+</li>
+<li><code>vp_entity_tags_{$entityName}</code><ul>
+<li><code>apply_filters(&quot;vp_entity_tags_{$entityName}&quot;, $tags, $oldEntity, $newEntity, $action)</code></li>
+</ul>
+</li>
+<li><code>vp_meta_entity_tags_{$entityName}</code><ul>
+<li><code>apply_filters(&quot;vp_meta_entity_tags_{$entityName}&quot;, $tags, $oldEntity, $newEntity, $action, $oldParentEntity, $newParentEntity)</code></li>
+</ul>
+</li>
+<li><code>vp_entity_files_{$entityName}</code><ul>
+<li><code>apply_filters(&quot;vp_entity_files_{$entityName}&quot;, $files, $oldEntity, $newEntity)</code></li>
+</ul>
+</li>
+<li><code>vp_meta_entity_files_{$entityName}</code><ul>
+<li><code>apply_filters(&quot;vp_meta_entity_files_{$entityName}&quot;, $files, $oldEntity, $newEntity, $oldParentEntity, $newParentEntity)</code></li>
+</ul>
+</li>
+<li><code>vp_entity_should_be_saved_{$entityName}</code><ul>
+<li><code>apply_filters(&quot;vp_entity_should_be_saved_{$entityName}&quot;, $shouldBeSaved, $data, $storage)</code></li>
+</ul>
+</li>
+<li><code>vp_bulk_change_description_{$entityName}</code><ul>
+<li><code>apply_filters(&quot;vp_bulk_change_description_{$entityName}&quot;, $description, $action, $count, $tags)</code></li>
+</ul>
+</li>
+<li><code>vp_action_description_{$scope}</code><ul>
+<li><code>apply_filters(&quot;vp_action_description_{$scope}&quot;, $message, $action, $vpid, $tags)</code></li>
+</ul>
+</li>
+<li><code>vp_action_priority_{$scope}</code><ul>
+<li><code>apply_filters(&quot;vp_action_priority_{$entityName}&quot;, $defaultPriority, $action, $vpid, $entity)</code></li>
+<li><code>apply_filters(&quot;vp_action_priority_{$entityName}&quot;, $defaultPriority, $action, $vpid)</code></li>
+</ul>
+</li>
+</ul>
+<h3 id="actions-api">Actions (API)<a class="headerlink" href="#actions-api" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>vp_before_synchronization_{$entityName}</code><ul>
+<li><code>do_action(&quot;vp_before_synchronization_{$entityName}&quot;)</code></li>
+</ul>
+</li>
+<li><code>vp_after_synchronization_{$entityName}</code><ul>
+<li><code>do_action(&quot;vp_after_synchronization_{$entityName}&quot;)</code></li>
+</ul>
+</li>
+</ul>
+<h3 id="functions">Functions<a class="headerlink" href="#functions" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>vp_force_action</code><ul>
+<li><code>vp_force_action($scope, $action, $id = '', $tags = [], $files = [])</code></li>
+</ul>
+</li>
+</ul>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../dev-setup/" title="Dev Setup" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Dev Setup
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../development-process/" title="Development Process" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Development Process
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2018 VersionPress
+          </div>
+        
+        powered by
+        <a href="http://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+        
+  <div class="md-footer-social">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+      <a href="https://github.com/versionpress" class="md-footer-social__link fa fa-github"></a>
+    
+      <a href="https://twitter.com/versionpress" class="md-footer-social__link fa fa-twitter"></a>
+    
+      <a href="https://facebook.com/VersionPress" class="md-footer-social__link fa fa-facebook"></a>
+    
+      <a href="https://blog.versionpress.net/" class="md-footer-social__link fa fa-wordpress"></a>
+    
+  </div>
+
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../../assets/javascripts/application.b438e6c5.js"></script>
+      
+      <script>app.initialize({version:"0.17.3",url:{base:"../../.."}})</script>
+      
+        <script src="../../../assets/javascripts/extra.js"></script>
+      
+    
+    
+      
+        <script>!function(e,a,t,n,o,c,i){e.GoogleAnalyticsObject=o,e.ga=e.ga||function(){(e.ga.q=e.ga.q||[]).push(arguments)},e.ga.l=1*new Date,c=a.createElement(t),i=a.getElementsByTagName(t)[0],c.async=1,c.src="https://www.google-analytics.com/analytics.js",i.parentNode.insertBefore(c,i)}(window,document,"script",0,"ga"),ga("create","UA-51665915-2","auto"),ga("set","anonymizeIp",!0),ga("send","pageview");var links=document.getElementsByTagName("a");if(Array.prototype.map.call(links,function(e){e.host!=document.location.host&&e.addEventListener("click",function(){var a=e.getAttribute("data-md-action")||"follow";ga("send","event","outbound",a,e.href)})}),document.forms.search){var query=document.forms.search.query;query.addEventListener("blur",function(){if(this.value){var e=document.location.pathname;ga("send","pageview",e+"?q="+this.value)}})}</script>
+      
+    
+  </body>
+</html>
