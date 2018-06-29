@@ -374,6 +374,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#vp_wp_cli_binary" title="VP_WP_CLI_BINARY" class="md-nav__link">
+    VP_WP_CLI_BINARY
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#vp_vpdb_dir" title="VP_VPDB_DIR" class="md-nav__link">
     VP_VPDB_DIR
   </a>
@@ -1183,6 +1190,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#vp_wp_cli_binary" title="VP_WP_CLI_BINARY" class="md-nav__link">
+    VP_WP_CLI_BINARY
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#vp_vpdb_dir" title="VP_VPDB_DIR" class="md-nav__link">
     VP_VPDB_DIR
   </a>
@@ -1248,15 +1262,19 @@
 <p>This will work if you have <a href="https://github.com/wp-cli/wp-cli/wiki/Alternative-Install-Methods">WP-CLI installed</a> and VersionPress activated.</p>
 <p>Below are listed some of the supported constants. To get an always-up-to-date list, run <code>wp help vp config</code>.</p>
 <h3 id="vp_git_binary">VP_GIT_BINARY<a class="headerlink" href="#vp_git_binary" title="Permanent link">&para;</a></h3>
-<p><em>Default: <code>git</code></em>
+<p><em>Default: <code>git</code></em><br>
 <em>Configuration file: <code>wp-config.php</code></em></p>
 <p>By default, VersionPress calls just <code>git</code> which leaves the path resolution up to the operating system. That might be problematic on some server configurations which use different <code>PATH</code> for different users (the web server user might not be the same user under which you are logged in), there might be some <code>PATH</code> caching involved, etc. If VersionPress cannot detect Git for some reason, use this option.</p>
+<h3 id="vp_wp_cli_binary">VP_WP_CLI_BINARY<a class="headerlink" href="#vp_wp_cli_binary" title="Permanent link">&para;</a></h3>
+<p><em>Default: <code>wp</code></em><br>
+<em>Configuration file: <code>wp-config.php</code></em></p>
+<p>Absolute path to a WP-CLI binary, analogous to <code>VP_GIT_BINARY</code>.</p>
 <h3 id="vp_vpdb_dir">VP_VPDB_DIR<a class="headerlink" href="#vp_vpdb_dir" title="Permanent link">&para;</a></h3>
-<p><em>Default: <code>WP_CONTENT_DIR . '/vpdb'</code></em>
+<p><em>Default: <code>WP_CONTENT_DIR . '/vpdb'</code></em><br>
 <em>Configuration file: <code>wp-config.common.php</code></em></p>
 <p>By default, VersionPress saves all its content into the <code>vpdb</code> directory under <code>WP_CONTENT_DIR</code>. You can change it by setting this constant. <code>VP_VPDB_DIR</code> must be under the <code>VP_PROJECT_ROOT</code>.</p>
 <h3 id="vp_project_root">VP_PROJECT_ROOT<a class="headerlink" href="#vp_project_root" title="Permanent link">&para;</a></h3>
-<p><em>Default: <code>ABSPATH</code></em>
+<p><em>Default: <code>ABSPATH</code></em><br>
 <em>Configuration file: <code>wp-config.common.php</code></em></p>
 <p>By default, VersionPress creates the repository (and the <code>.git</code> directory) in the <code>ABSPATH</code> directory. If you <a href="../../feature-focus/custom-project-structure/#giving-wordpress-its-own-directory">move WordPress into its own directory</a>, you have to define this constant to point to the original <code>ABSPATH</code> location. For example, if you have the site at <code>/var/www/my-site</code> and you move WordPress into <code>/var/www/my-site/wordpress</code>, the <code>VP_PROJECT_ROOT</code> needs to be set to <code>/var/www/my-site</code> (where the <code>.git</code> directory is).</p>
                 

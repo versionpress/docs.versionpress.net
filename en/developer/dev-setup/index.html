@@ -1746,7 +1746,7 @@
 <h2 id="dockerized-development-environment">Dockerized development environment<a class="headerlink" href="#dockerized-development-environment" title="Permanent link">&para;</a></h2>
 <p>To start a development site:</p>
 <ol>
-<li>Make sure ports 80 and 3306 are free, e.g., no local MAMP / XAMPP is running.</li>
+<li>Make sure Docker is running and ports 80 and 3306 are free (no local MAMP / XAMPP / MySQL running).</li>
 <li>Run <code>npm start</code>.</li>
 </ol>
 <p>This will start a set of Docker containers in the background. When everything boots up, log into the test site at <a href="http://localhost">http://localhost</a>, install WordPress and activate VersionPress on the <em>Plugins</em> page. You're now all set up! 🎉</p>
@@ -1760,12 +1760,12 @@
 </ul>
 <p>Some useful tips for managing your Docker environment:</p>
 <ul>
-<li><code>docker-compose ps</code> lists running containers.</li>
+<li><code>docker-compose ps</code> lists running containers</li>
 <li><code>docker-compose logs -f</code> displays live logs</li>
-<li><code>docker-compose logs wordpress</code> displays logs of a single service.</li>
-<li><code>docker stats</code> show live CPU / memory usage.</li>
-<li>See also <a href="#docker-tips">Docker tips</a> below.</li>
+<li><code>docker-compose logs wordpress</code> displays logs of a single service</li>
+<li><code>docker stats</code> show live CPU / memory usage</li>
 </ul>
+<p>See also <a href="#docker-tips">Docker tips</a> below.</p>
 <p>Run <code>npm stop</code> to stop the development environment. Run <code>npm run stop-and-cleanup</code> to also clean up WordPress files and MySQL database for a fresh start next time.</p>
 <h3 id="phpstorm-setup">PhpStorm setup<a class="headerlink" href="#phpstorm-setup" title="Permanent link">&para;</a></h3>
 <p>For PHP development, we recommend <a href="https://www.jetbrains.com/phpstorm/">PhpStorm</a> and ship project files for it. The steps here have been tested in PhpStorm <strong>2018.1</strong>.</p>
