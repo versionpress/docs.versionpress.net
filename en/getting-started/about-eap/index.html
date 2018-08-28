@@ -357,38 +357,9 @@
       
     
     
-      <label class="md-nav__link md-nav__link--active" for="toc">
-        Developer Preview
-      </label>
-    
     <a href="./" title="Developer Preview" class="md-nav__link md-nav__link--active">
       Developer Preview
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#considerations" title="Considerations" class="md-nav__link">
-    Considerations
-  </a>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
-  
-</nav>
     
   </li>
 
@@ -1123,22 +1094,6 @@
     
   
   
-    <label class="md-nav__title" for="toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#considerations" title="Considerations" class="md-nav__link">
-    Considerations
-  </a>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -1153,20 +1108,82 @@
                 
                 
                 <h1 id="developer-preview">Developer Preview<a class="headerlink" href="#developer-preview" title="Permanent link">&para;</a></h1>
-<p>Currently, VersionPress is a <strong>"Developer Preview"</strong>. It can be tried on simpler sites for development purposes but it's not production-ready yet.</p>
-<h2 id="considerations">Considerations<a class="headerlink" href="#considerations" title="Permanent link">&para;</a></h2>
+<p>Currently, VersionPress is a <em>Developer Preview</em> and <strong>should not be used in production</strong>. We really mean it: any bugs or plugin incompatibilities might mess up your database.</p>
+<p>If you're eager to start using better WordPress workflows today, you can check out <a href="https://versionpress.com">VersionPress.com</a>: a simplified take on database merging by the same team, with different set of trade-offs (not directly built on Git, not as powerful but much more compatible with real-world sites). Note that VersionPress.com is a hosted service, not a plugin.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>Fun fact: An ant can live up to 29 years.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>In Morse Code, <code>-.-</code> means k.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>Ok, there are people that use VersionPress in production or to power their workflows. However, make sure you understand a couple of key points:</p>
 <ul>
-<li>A safe bet is to use VersionPress for testing / dev purposes only. Local, throw-away sites and workflows are ideal.</li>
-<li>Production deployment is strongly discouraged but if you attempt it despite the warning, at least <strong><span style="color:red;">keep backup at all times</span></strong>.</li>
-<li>Compatibility with WordPress plugins and themes is often problematic, see <a href="../../integrations/">3<sup>rd</sup> Party Integrations section</a>.</li>
-<li>Compatibility with hosts is often problematic as Git and <code>proc_open()</code> are required on the server. See <a href="../../integrations/hosts/">Hosting</a> and <a href="../installation-uninstallation/">System requirements</a>.</li>
-<li>Be familiar with WordPress and Git.</li>
+<li>For actions that perform database merging (pull, undo, ...), all plugins on your site <em>must</em> be compatible with VersionPress, otherwise the site integrity cannot be guaranteed. At this point, you will need to ensure this yourself and possibly write <a href="https://docs.versionpress.net/en/developer/plugin-support/">plugin definitions</a>.</li>
+<li>You'll probably need to be a developer yourself, with good knowledge of Git, WordPress and debugging in general.</li>
+<li><strong><span style="color:red;">Keep backup at all times!</span></strong></li>
 </ul>
-<p>You can tell whether you are using a Developer Preview / Early Access release of VersionPress from the top admin bar.</p>
+<p>Good luck and welcome to the dark side.</p>
+<hr />
 <div class="admonition note">
 <p class="admonition-title">Note on 'Early Access' and 'EAP'</p>
-<p>Between January 2015 and March 2016, VersionPress used to be available through the <em>Early Access Program (EAP)</em>. It was discontinued when VersionPress <a href="https://blog.versionpress.net/2016/04/going-open-source/">moved to a fully open development model</a> in April 2016.</p>
-<p>Between April 2016 and May 2017, the term "Early Access" was used. We then switched to "Developer Preview" which better indicates the project status. See <a href="https://github.com/versionpress/versionpress/issues/1201">issue #1201</a>.</p>
+<p>Between January 2015 and March 2016, VersionPress used to be available through an <em>Early Access Program (EAP)</em>. It was discontinued when VersionPress <a href="https://blog.versionpress.net/2016/04/going-open-source/">moved to an open-source model</a> in April 2016.</p>
+<p>Between April 2016 and May 2017, the term <em>Early Access</em> was used, eventually <a href="https://github.com/versionpress/versionpress/issues/1201">replaced</a> by the current one.</p>
 </div>
                 
                   

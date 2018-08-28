@@ -899,8 +899,7 @@
     Ignoring entities
   </a>
   
-    <nav class="md-nav">
-      <ul class="md-nav__list">
+</li>
         
           <li class="md-nav__item">
   <a href="#ignoring-columns" title="Ignoring columns" class="md-nav__link">
@@ -913,11 +912,6 @@
   <a href="#cache-invalidation" title="Cache invalidation" class="md-nav__link">
     Cache invalidation
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -1447,8 +1441,7 @@
     Ignoring entities
   </a>
   
-    <nav class="md-nav">
-      <ul class="md-nav__list">
+</li>
         
           <li class="md-nav__item">
   <a href="#ignoring-columns" title="Ignoring columns" class="md-nav__link">
@@ -1461,11 +1454,6 @@
   <a href="#cache-invalidation" title="Cache invalidation" class="md-nav__link">
     Cache invalidation
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -1897,7 +1885,7 @@
 </pre></div>
 
 <p>Again, queries are used. Wildcards are supported.</p>
-<h4 id="ignoring-columns">Ignoring columns<a class="headerlink" href="#ignoring-columns" title="Permanent link">&para;</a></h4>
+<h3 id="ignoring-columns">Ignoring columns<a class="headerlink" href="#ignoring-columns" title="Permanent link">&para;</a></h3>
 <p>It is possible to ignore just parts of entities. The columns might either be ignored entirely or computed dynamically using a PHP function:</p>
 <div class="codehilite"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">entity</span><span class="p p-Indicator">:</span>
   <span class="l l-Scalar l-Scalar-Plain">ignored-columns</span><span class="p p-Indicator">:</span>
@@ -1907,7 +1895,7 @@
 </pre></div>
 
 <p>The function is called whenever VersionPress does its INI files =&gt; DB synchronization. The function will get an instance of <code>VersionPress\Database\Database</code> as an argument and is expected to update the database appropriately. The <code>Database</code> class has the same methods as <code>wpdb</code> but the changes it make are not tracked by VersionPress itself.</p>
-<h4 id="cache-invalidation">Cache invalidation<a class="headerlink" href="#cache-invalidation" title="Permanent link">&para;</a></h4>
+<h3 id="cache-invalidation">Cache invalidation<a class="headerlink" href="#cache-invalidation" title="Permanent link">&para;</a></h3>
 <p>WordPress uses cache for posts, comments, users, terms, etc. This cache needs to be invalidated when VersionPress updates database (on undo, rollback, pull, etc.). It is possible to tell VersionPress which cache to invalidate and where to find the related IDs.</p>
 <p>For example, when some post is deleted using the Undo functionality, it is necessary to call <code>clean_post_cache(&lt;post-id&gt;)</code>. VersionPress will do it automatically based on following piece of schema:</p>
 <div class="codehilite"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">post</span><span class="p p-Indicator">:</span>
